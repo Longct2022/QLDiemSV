@@ -35,6 +35,14 @@ namespace QLDiemSV.BUS
         {
             svDAO.ThemSV(sv);
         }
+        public void XoaSV(string maSV)
+        {
+            svDAO.XoaSV(maSV);
+        }
+        public void SuaSV(SinhVien sv)
+        {
+            svDAO.SuaSV(sv);
+        }
 
     }
 }

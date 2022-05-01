@@ -41,3 +41,21 @@ D:\OneDrive - Thuyloi University\@LT-CNTT\2022-HK2\LT Windows\Code\GitHub\QLDiem
 D:\OneDrive - Thuyloi University\@LT-CNTT\2022-HK2\LT Windows\Code\GitHub\QLDiemSV_\obj\Debug\QLDiemSV.exe
 D:\OneDrive - Thuyloi University\@LT-CNTT\2022-HK2\LT Windows\Code\GitHub\QLDiemSV_\obj\Debug\QLDiemSV.pdb
 D:\OneDrive - Thuyloi University\@LT-CNTT\2022-HK2\LT Windows\Code\GitHub\QLDiemSV_\obj\Debug\QLDiemSV.GUI.frmQLSinhVien.resources
+D:\GitHub\QLDiemSV\bin\Debug\QLDiemSV.exe.config
+D:\GitHub\QLDiemSV\bin\Debug\QLDiemSV.exe
+D:\GitHub\QLDiemSV\bin\Debug\QLDiemSV.pdb
+D:\GitHub\QLDiemSV\bin\Debug\System.Security.AccessControl.dll
+D:\GitHub\QLDiemSV\bin\Debug\System.Security.Principal.Windows.dll
+D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.csproj.AssemblyReference.cache
+D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.csproj.SuggestedBindingRedirects.cache
+D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.GUI.frmDoiTTNgDung.resources
+D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.GUI.frmLogin.resources
+D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.GUI.frmMain.resources
+D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.GUI.frmQLNguoiDung.resources
+D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.GUI.frmQLSinhVien.resources
+D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.Properties.Resources.resources
+D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.csproj.GenerateResource.cache
+D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.csproj.CoreCompileInputs.cache
+D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.csproj.CopyComplete
+D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.exe
+D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.pdb

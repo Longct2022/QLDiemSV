@@ -41,6 +41,16 @@ namespace QLDiemSV.DAO
             dh.AddRow(dt, sv.MaSV, sv.HoTen, sv.NgaySinh, sv.GioiTinh, sv.DiaChi, sv.MaLop);
             dh.UpdateDataTableToDatabase(dt, "SINH_VIEN");
         }
+        public void XoaSV(string maSV)
+        {
+            dh.DeleteRows(dt, "MaSV = '" + maSV + "'");
+            dh.UpdateDataTableToDatabase(dt, "SINH_VIEN");
+        }
+        public void SuaSV(SinhVien sv)
+        {
+            dh.EditRow(dt, "MaSV = '" + sv.MaSV + "'", sv.MaSV, sv.HoTen, sv.NgaySinh, sv.GioiTinh, sv.DiaChi, sv.MaLop);
+            dh.UpdateDataTableToDatabase(dt, "SINH_VIEN");
+        }
     }
 
 
