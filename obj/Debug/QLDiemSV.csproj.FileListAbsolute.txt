@@ -40,3 +40,4 @@ D:\OneDrive - Thuyloi University\@LT-CNTT\2022-HK2\LT Windows\Code\GitHub\QLDiem
 D:\OneDrive - Thuyloi University\@LT-CNTT\2022-HK2\LT Windows\Code\GitHub\QLDiemSV_\obj\Debug\QLDiemSV.csproj.CopyComplete
 D:\OneDrive - Thuyloi University\@LT-CNTT\2022-HK2\LT Windows\Code\GitHub\QLDiemSV_\obj\Debug\QLDiemSV.exe
 D:\OneDrive - Thuyloi University\@LT-CNTT\2022-HK2\LT Windows\Code\GitHub\QLDiemSV_\obj\Debug\QLDiemSV.pdb
+D:\OneDrive - Thuyloi University\@LT-CNTT\2022-HK2\LT Windows\Code\GitHub\QLDiemSV_\obj\Debug\QLDiemSV.GUI.frmQLSinhVien.resources

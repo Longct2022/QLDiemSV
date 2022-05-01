@@ -147,5 +147,11 @@ namespace QLDiemSV.GUI
                 mnuQLGV.Enabled = false;
             }
         }
+
+        private void mnuQLSV_Click(object sender, EventArgs e)
+        {
+            frmQLSinhVien f = new frmQLSinhVien();
+            f.Show();
+        }
     }
 }

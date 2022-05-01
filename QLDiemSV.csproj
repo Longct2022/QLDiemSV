@@ -68,8 +68,13 @@
     <Compile Include="BUS\CapNhatTKBUS.cs" />
     <Compile Include="BUS\LoginBUS.cs" />
     <Compile Include="BUS\QLNguoiDungBUS.cs" />
+    <Compile Include="BUS\QLSinhVienBUS.cs" />
     <Compile Include="DAO\DataHelper.cs" />
+    <Compile Include="DAO\LopDAO.cs" />
+    <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="Entities\Lop.cs" />
+    <Compile Include="Entities\SinhVien.cs" />
     <Compile Include="Entities\Users.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -101,6 +106,12 @@
     <Compile Include="GUI\frmQLNguoiDung.Designer.cs">
       <DependentUpon>frmQLNguoiDung.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmQLSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQLSinhVien.Designer.cs">
+      <DependentUpon>frmQLSinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\frmDoiTTNgDung.resx">
@@ -114,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmQLNguoiDung.resx">
       <DependentUpon>frmQLNguoiDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQLSinhVien.resx">
+      <DependentUpon>frmQLSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

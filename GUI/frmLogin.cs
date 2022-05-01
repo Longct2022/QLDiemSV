@@ -54,5 +54,13 @@ namespace QLDiemSV.GUI
         {
             txtUser.Focus();
         }
+
+        private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                this.btnDangNhap_Click(sender, e);
+            }    
+        }
     }
 }

@@ -68,16 +68,19 @@ namespace QLDiemSV.GUI
                 if (txtCurrentPassword.Text != Program.user.Password)
                 {
                     MessageBox.Show("Mật khẩu hiện tại chưa đúng !", "Thông báo", MessageBoxButtons.OK);
+                    this.btnPasswordChange_Click(sender, e);
                     txtCurrentPassword.Focus();
                 }
                 else if (txtNewPassword.Text == "")
                 {
                     MessageBox.Show("Mật khẩu mới không được để trống !", "Thông báo", MessageBoxButtons.OK);
+                    this.btnPasswordChange_Click(sender, e);
                     txtNewPassword.Focus();
                 }
                 else if (txtNewPassword.Text != txtNPassowrdConfirm.Text)
                 {
                     MessageBox.Show("Nhắc lại mật khẩu không trùng !", "Thông báo", MessageBoxButtons.OK);
+                    this.btnPasswordChange_Click(sender, e);
                     txtNPassowrdConfirm.Focus();
                 }
                 else
