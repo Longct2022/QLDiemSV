@@ -1,21 +1,14 @@
 ﻿using QLDiemSV.BUS;
-using QLDiemSV.DAO;
 using QLDiemSV.Entities;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QLDiemSV.GUI
 {
     public partial class frmQLSinhVien : Form
     {
-        QLSinhVienBUS bus = new QLSinhVienBUS(Program.strcon);
+        readonly QLSinhVienBUS bus = new QLSinhVienBUS(Program.strcon);
 
         List<SinhVien> lsv = new List<SinhVien>();
         int flag;

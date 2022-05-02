@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using QLDiemSV.DAO;
+﻿using QLDiemSV.DAO;
 using QLDiemSV.Entities;
+using System.Collections.Generic;
 
 namespace QLDiemSV.BUS
 {
     public class CapNhatTKBUS
     {
-
-        DataHelper dh;
-        UserDAO uDAO = new UserDAO(Program.strcon);
+        private readonly DataHelper dh;
+        readonly UserDAO uDAO = new UserDAO(Program.strcon);
         public CapNhatTKBUS(string strcon)
         {
             dh = new DataHelper(strcon);

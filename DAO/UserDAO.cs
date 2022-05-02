@@ -1,11 +1,6 @@
-﻿using System;
+﻿using QLDiemSV.Entities;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
 using System.Data;
-using QLDiemSV.Entities;
 
 namespace QLDiemSV.DAO
 {
@@ -13,35 +8,34 @@ namespace QLDiemSV.DAO
     public class UserDAO
     {
         // Tạo một đối tượng DataHelper để làm việc với Database
-        DataHelper dh;
-        DataTable dt;
+        readonly DataHelper dh;
+        readonly DataTable dt;
 
         /// <summary>
         /// Hàm tạo UserDao
         /// </summary>
         /// <param name="sqlcon">connection string</param>
-        public UserDAO (string sqlcon)
+        public UserDAO(string sqlcon)
         {
             dh = new DataHelper(sqlcon);
         }
         public List<Users> LayUsers()
         {
             List<Users> l = new List<Users>();
-            dt = dh.FillDataTable("select * from UserList");
-            foreach (DataRow dr in dt.Rows)
-            {
-                Users user = new Users();
-                user.UserID = dr["UserID"].ToString();
-                user.Password = dr["Password"].ToString();
-                user.Sex = dr["Sex"].ToString();
-                user.FullName = dr["FullName"].ToString();
-                user.Role = dr["Role"].ToString();
-                user.PhoneNumber = dr["Phone"].ToString() ;
-                l.Add(user);
-            }    
+            var rows = dh.FillDataTable("select * from UserList").Rows;
+            foreach (DataRow dr in rows)
+                l.Add(new Users
+                {
+                    UserID = dr["UserID"].ToString(),
+                    Password = dr["Password"].ToString(),
+                    Sex = dr["Sex"].ToString(),
+                    FullName = dr["FullName"].ToString(),
+                    Role = dr["Role"].ToString(),
+                    PhoneNumber = dr["Phone"].ToString()
+                });
             return l;
         }
-        
+
         public void SuaUser(Users u)
         {
             //dt = dh.FillDataTable("select * from UserList");

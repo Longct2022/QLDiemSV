@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
 
 namespace QLDiemSV.DAO
 {
     public class DataHelper
     {
-        string sqlcon;
-        SqlConnection conn = null;
+        readonly string sqlcon;
+        readonly SqlConnection conn = null;
         public DataHelper(string sqlcon)
         {
             conn = new SqlConnection(sqlcon);
@@ -26,9 +21,8 @@ namespace QLDiemSV.DAO
         {
             DataTable dt = new DataTable();
             // Tạo một SqlAdapter kết nối vói CSDL thông qua câu lệnh sqlselect và chuỗi kết nối sqlcon
-            SqlDataAdapter adapter = new SqlDataAdapter(sqlselect, sqlcon);
             // Dùng phương thức Fill của DataTable để điền dữ liệu vào bảng 
-            adapter.Fill(dt);
+            new SqlDataAdapter(sqlselect, sqlcon).Fill(dt);
             return dt;
         }
         /// <summary>
@@ -53,9 +47,10 @@ namespace QLDiemSV.DAO
         /// <returns></returns>
         public DataView Filter(DataTable dt, string dk)
         {
-            DataView dv = new DataView(dt);
-            dv.RowFilter = dk;
-            return dv;
+            return new DataView(dt)
+            {
+                RowFilter = dk
+            };
         }
         /// <summary>
         /// Thay thế một dòng trong DataTable theo điều kiện
@@ -85,7 +80,7 @@ namespace QLDiemSV.DAO
             // SqlCommandBuilder sẽ đọc câu SQL select (lấy từ SqlDataAdapter),
             // từ đó suy ra các lệnh insert, update và delete, sau đó gán các lệnh mới
             // vào các property Insert, Update, Delete của SqlDataAdapter tương ứng.
-            SqlCommandBuilder cmd = new SqlCommandBuilder(da);
+            _ = new SqlCommandBuilder(da);
             da.Update(dt);
         }
         public void DeleteRows(DataTable dt, string dk)
