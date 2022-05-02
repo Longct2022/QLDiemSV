@@ -24,43 +24,10 @@ namespace QLDiemSV.GUI
             InitializeComponent();
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            SinhVien sv = lsv.Find(u => u.MaSV == txtMaSV.Text);
-            if (sv == null)
-            {
-                MessageBox.Show("Mã sinh viên không được để trống !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtMaSV.Focus();
-            }
-            else
-            {
-                if (MessageBox.Show("Bạn có muốn xóa tài khoản " + txtMaSV.Text.ToString() + " không Y/N", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    int currentRow = lsv.FindIndex(s => s.MaSV == txtMaSV.Text);
-                    if (currentRow == 0) currentRow = 1;
-                    bus.XoaSV(txtMaSV.Text);
-                    SinhVien delUser = lsv.Find(s => s.MaSV == txtMaSV.Text);
-                    lsv.Remove(delUser);
-                    MessageBox.Show("Đã xóa tài khoản " + txtMaSV.Text);
-                    dgvTTSV.DataSource = null;
-                    dgvTTSV.DataSource = lsv;
-                    dgvTTSV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                    // Thiết lập dòng được chọn là dòng cuối cùng vừa thêm
-                    dgvTTSV.CurrentCell = dgvTTSV.Rows[currentRow - 1].Cells[0];
-
-                    btnHuy.Enabled = false;
-                    btnLuu.Enabled = false;
-                    btnMoi.Enabled = true;
-                    btnSua.Enabled = true;
-                    btnXoa.Enabled = true;
-                }                
-            }
-        }
-
         private void frmQLSinhVien_Load(object sender, EventArgs e)
         {
             lsv = bus.LayDSSinhVien();
-            dgvTTSV.DataSource = lsv;
+            dgv.DataSource = lsv;
             btnHuy.Enabled = false;
             btnLuu.Enabled = false;
             btnMoi.Enabled = true;
@@ -68,8 +35,20 @@ namespace QLDiemSV.GUI
             btnXoa.Enabled = true;
             cboMaLop.DataSource = bus.LayDSLop();
             cboMaLop.DisplayMember = "MaLop";
+            cboLoc.Enabled = false;
+            cbLoc.Checked = false;
         }
 
+        private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaSV.Text = dgv.CurrentRow.Cells["MaSV"].Value.ToString();
+            txtHoTen.Text = dgv.CurrentRow.Cells["HoTen"].Value.ToString();
+            txtDiaChi.Text = dgv.CurrentRow.Cells["DiaChi"].Value.ToString();
+            cboMaLop.Text = dgv.CurrentRow.Cells["MaLop"].Value.ToString();
+            txtNgaySinh.Text = dgv.CurrentRow.Cells["NgaySinh"].Value.ToString();
+            cboSex.Text = dgv.CurrentRow.Cells["GioiTinh"].Value.ToString();
+
+        }
 
         private void btnMoi_Click(object sender, EventArgs e)
         {
@@ -88,17 +67,82 @@ namespace QLDiemSV.GUI
             txtMaSV.Focus();
         }
 
-        private void dgvTTSV_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void btnSua_Click(object sender, EventArgs e)
         {
-            txtMaSV.Text = dgvTTSV.CurrentRow.Cells["MaSV"].Value.ToString();
-            txtHoTen.Text = dgvTTSV.CurrentRow.Cells["HoTen"].Value.ToString();
-            txtDiaChi.Text = dgvTTSV.CurrentRow.Cells["DiaChi"].Value.ToString();
-            cboMaLop.Text = dgvTTSV.CurrentRow.Cells["MaLop"].Value.ToString();
-            txtNgaySinh.Text = dgvTTSV.CurrentRow.Cells["NgaySinh"].Value.ToString();
-            cboSex.Text = dgvTTSV.CurrentRow.Cells["GioiTinh"].Value.ToString();
-
+            flag = 1;
+            txtMaSV.Enabled = false;
+            btnSua.Enabled = false;
+            btnLuu.Enabled = true;
+            btnHuy.Enabled = true;
+            btnXoa.Enabled = false;
         }
 
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            SinhVien sv = lsv.Find(u => u.MaSV == txtMaSV.Text);
+            if (txtMaSV.Text == "")
+            {
+                MessageBox.Show("Mã sinh viên không được để trống !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMaSV.Focus();
+            }
+            else if (sv == null)
+            {
+                MessageBox.Show("Mã sinh viên không tồn tại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtMaSV.Focus();
+            }    
+            else
+            {
+                if (MessageBox.Show("Bạn có muốn xóa tài khoản " + txtMaSV.Text.ToString() + " không Y/N", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    int currentRow = lsv.FindIndex(s => s.MaSV == txtMaSV.Text);
+                    if (currentRow == 0) currentRow = 1;
+                    bus.XoaSV(txtMaSV.Text);
+                    SinhVien delUser = lsv.Find(s => s.MaSV == txtMaSV.Text);
+                    lsv.Remove(delUser);
+                    MessageBox.Show("Đã xóa tài khoản " + txtMaSV.Text);
+                    dgv.DataSource = null;
+                    dgv.DataSource = lsv;
+                    dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    // Thiết lập dòng được chọn là dòng cuối cùng vừa thêm
+                    dgv.CurrentCell = dgv.Rows[currentRow - 1].Cells[0];
+
+                    btnHuy.Enabled = false;
+                    btnLuu.Enabled = false;
+                    btnMoi.Enabled = true;
+                    btnSua.Enabled = true;
+                    btnXoa.Enabled = true;
+                }
+            }
+        }
+
+        private void cbLocSV_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbLoc.Checked)
+            {
+                cboLoc.DataSource = cboMaLop.DataSource;
+                cboLoc.DisplayMember = "MaLop";
+                cboLoc.SelectedIndex = 0;
+                cboLoc.Enabled = cbLoc.Checked;
+            }
+            else
+            {
+                cboLoc.Enabled = false;
+                cboLoc.SelectedIndex = -1;
+            }                
+        }
+
+        private void cboLocMaLop_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbLoc.Checked)
+                dgv.DataSource = bus.LayDSSinhVien(cboLoc.Text);
+            else
+                dgv.DataSource = bus.LayDSSinhVien();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.frmQLSinhVien_Load(sender, e);
+        }
         private void btnLuu_Click(object sender, EventArgs e)
         {
             if (txtMaSV.Text == "")
@@ -113,7 +157,7 @@ namespace QLDiemSV.GUI
             }
             else
             {
-                if (flag == 0)
+                if (flag == 0)      // Trường hợp thêm SV mới
                 {
                     SinhVien u = lsv.Find(s => s.MaSV == txtMaSV.Text);
                     if (u != null)
@@ -133,15 +177,14 @@ namespace QLDiemSV.GUI
                             NgaySinh = txtNgaySinh.Text
                         };
 
-
                         bus.ThemSV(nsv);
                         lsv.Add(nsv);
                         MessageBox.Show("Đã thêm sinh viên có mã " + nsv.MaSV);
-                        dgvTTSV.DataSource = null;
-                        dgvTTSV.DataSource = lsv;
-                        dgvTTSV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                        dgv.DataSource = null;
+                        dgv.DataSource = lsv;
+                        dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                         // Thiết lập dòng được chọn là dòng cuối cùng vừa thêm
-                        dgvTTSV.CurrentCell = dgvTTSV.Rows[dgvTTSV.Rows.Count - 1].Cells[0];
+                        dgv.CurrentCell = dgv.Rows[dgv.Rows.Count - 1].Cells[0];
                     }
                 }
                 else if (flag == 1)
@@ -166,11 +209,11 @@ namespace QLDiemSV.GUI
                     sv.DiaChi = txtDiaChi.Text;
                     sv.NgaySinh = txtNgaySinh.Text;
                     MessageBox.Show("Đã sửa tài khoản '" + esv.MaSV + "'");
-                    dgvTTSV.DataSource = null;
-                    dgvTTSV.DataSource = lsv;
-                    dgvTTSV.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    dgv.DataSource = null;
+                    dgv.DataSource = lsv;
+                    dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                     // Thiết lập dòng được chọn là dòng cuối cùng vừa thêm
-                    dgvTTSV.CurrentCell = dgvTTSV.Rows[lsv.FindIndex(us => us.MaSV == esv.MaSV)].Cells[0];
+                    dgv.CurrentCell = dgv.Rows[lsv.FindIndex(us => us.MaSV == esv.MaSV)].Cells[0];
                 }
             }
             txtMaSV.Clear();
@@ -183,17 +226,5 @@ namespace QLDiemSV.GUI
             btnXoa.Enabled = true;
             btnHuy.Enabled = true;
         }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            flag = 1;
-            txtMaSV.Enabled = false;
-            btnSua.Enabled = false;
-            btnLuu.Enabled = true;
-            btnHuy.Enabled = true;
-            btnXoa.Enabled = false;
-        }
-
-
     }
 }

@@ -59,3 +59,4 @@ D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.csproj.CoreCompileInputs.cache
 D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.csproj.CopyComplete
 D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.exe
 D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.pdb
+D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.GUI.frmQLLop.resources

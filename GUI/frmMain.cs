@@ -153,5 +153,11 @@ namespace QLDiemSV.GUI
             frmQLSinhVien f = new frmQLSinhVien();
             f.Show();
         }
+
+        private void mnuQLLop_Click(object sender, EventArgs e)
+        {
+            frmQLLop f = new frmQLLop();
+            f.Show();
+        }
     }
 }

@@ -36,6 +36,24 @@ namespace QLDiemSV.DAO
             return lsv;
         }
 
+        public List<SinhVien> LayDSSinhVien(string maLop)
+        {
+            List<SinhVien> lsv = new List<SinhVien>();
+            dt = dh.FillDataTable("select * from SINH_VIEN Where MaLop = '" + maLop +"'");
+            foreach (DataRow dr in dt.Rows)
+            {
+                lsv.Add(new SinhVien
+                {
+                    MaSV = dr["MaSV"].ToString(),
+                    HoTen = dr["HoTen"].ToString(),
+                    DiaChi = dr["DiaChi"].ToString(),
+                    MaLop = dr["MaLop"].ToString(),
+                    GioiTinh = dr["GioiTinh"].ToString(),
+                    NgaySinh = dr["NgaySinh"].ToString()
+                });
+            }
+            return lsv;
+        }
         public void ThemSV(SinhVien sv)
         {
             dh.AddRow(dt, sv.MaSV, sv.HoTen, sv.NgaySinh, sv.GioiTinh, sv.DiaChi, sv.MaLop);

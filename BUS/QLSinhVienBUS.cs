@@ -27,6 +27,10 @@ namespace QLDiemSV.BUS
         {
             return svDAO.LayDSSinhVien();
         }
+        public List<SinhVien> LayDSSinhVien(string maLop)
+        {
+            return svDAO.LayDSSinhVien(maLop);
+        }
         public List<Lop> LayDSLop()
         {
             return lopDAO.LayDSLop();
@@ -34,6 +38,7 @@ namespace QLDiemSV.BUS
         public void ThemSV(SinhVien sv)
         {
             svDAO.ThemSV(sv);
+            lopDAO.SuaSiSo(1, sv.MaLop);
         }
         public void XoaSV(string maSV)
         {

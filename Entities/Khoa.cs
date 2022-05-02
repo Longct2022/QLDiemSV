@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace QLDiemSV.Entities
 {
-    public class Lop
+    public class Khoa
     {
         public string MaKhoa { get; set; }
-        public string MaLop { get; set; }
-
-        public string TenLop { get; set; }
-        public int SiSo { get; set; }   
+        public string TenKhoa { get; set; }
     }
 }
