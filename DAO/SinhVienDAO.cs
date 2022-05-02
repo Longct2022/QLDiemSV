@@ -1,18 +1,14 @@
 ﻿using QLDiemSV.Entities;
-using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLDiemSV.DAO
 {
 
     public class SinhVienDAO
     {
-        DataHelper dh;
-        DataTable dt;
+        readonly DataHelper dh;
+        DataTable dt = new DataTable();
         public SinhVienDAO(string sqlcon)
         {
             dh = new DataHelper(sqlcon);
@@ -20,8 +16,8 @@ namespace QLDiemSV.DAO
         public List<SinhVien> LayDSSinhVien()
         {
             List<SinhVien> lsv = new List<SinhVien>();
-            dt =  dh.FillDataTable("select * from SINH_VIEN");
-            foreach (DataRow dr in dt.Rows)
+            var rows = dh.FillDataTable("select * from SINH_VIEN").Rows;
+            foreach (DataRow dr in rows)
             {          
                 lsv.Add(new SinhVien
                 {
@@ -61,12 +57,14 @@ namespace QLDiemSV.DAO
         }
         public void XoaSV(string maSV)
         {
-            dh.DeleteRows(dt, "MaSV = '" + maSV + "'");
+            //dh.DeleteRows(dt, "MaSV = '" + maSV + "'");
+            dh.DeleteRows(dt, $"MaSV = '{maSV}'");
             dh.UpdateDataTableToDatabase(dt, "SINH_VIEN");
         }
         public void SuaSV(SinhVien sv)
         {
-            dh.EditRow(dt, "MaSV = '" + sv.MaSV + "'", sv.MaSV, sv.HoTen, sv.NgaySinh, sv.GioiTinh, sv.DiaChi, sv.MaLop);
+            //dh.EditRow(dt, "MaSV = '" + sv.MaSV + "'", sv.MaSV, sv.HoTen, sv.NgaySinh, sv.GioiTinh, sv.DiaChi, sv.MaLop);
+            dh.EditRow(dt, $"MaSV = '{sv.MaSV}'", sv.MaSV, sv.HoTen, sv.NgaySinh, sv.GioiTinh, sv.DiaChi, sv.MaLop);
             dh.UpdateDataTableToDatabase(dt, "SINH_VIEN");
         }
     }

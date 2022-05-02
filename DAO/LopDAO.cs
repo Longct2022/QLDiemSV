@@ -1,17 +1,13 @@
 ﻿using QLDiemSV.Entities;
-using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace QLDiemSV.DAO
 {
     public class LopDAO
     {
-        DataHelper dh;
-        DataTable dt;
+        readonly DataHelper dh;
+        //DataTable dt;
         public LopDAO(string sqlcon)
         {
             dh = new DataHelper(Program.strcon);
@@ -20,8 +16,8 @@ namespace QLDiemSV.DAO
         public List<Lop> LayDSLop()
         {
             List<Lop> llop = new List<Lop>();
-            dt = dh.FillDataTable("select * from LOP");
-            foreach (DataRow dr in dt.Rows)
+            var rows = dh.FillDataTable("select * from LOP").Rows;
+            foreach (DataRow dr in rows)
             {
                 Lop lop = new Lop();
                 lop.MaLop = dr["MaLop"].ToString();
