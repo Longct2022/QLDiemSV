@@ -57,7 +57,7 @@
             this.cbLoc.AutoSize = true;
             this.cbLoc.Location = new System.Drawing.Point(523, 117);
             this.cbLoc.Name = "cbLoc";
-            this.cbLoc.Size = new System.Drawing.Size(155, 24);
+            this.cbLoc.Size = new System.Drawing.Size(190, 29);
             this.cbLoc.TabIndex = 98;
             this.cbLoc.Text = "Lọc SV theo khoa";
             this.cbLoc.UseVisualStyleBackColor = true;
@@ -153,7 +153,7 @@
             this.cboLoc.Location = new System.Drawing.Point(689, 113);
             this.cboLoc.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.cboLoc.Name = "cboLoc";
-            this.cboLoc.Size = new System.Drawing.Size(78, 28);
+            this.cboLoc.Size = new System.Drawing.Size(78, 33);
             this.cboLoc.TabIndex = 94;
             this.cboLoc.SelectedIndexChanged += new System.EventHandler(this.cboLoc_SelectedIndexChanged);
             // 
@@ -166,7 +166,7 @@
             this.cboKhoa.Location = new System.Drawing.Point(118, 116);
             this.cboKhoa.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.cboKhoa.Name = "cboKhoa";
-            this.cboKhoa.Size = new System.Drawing.Size(124, 28);
+            this.cboKhoa.Size = new System.Drawing.Size(124, 33);
             this.cboKhoa.TabIndex = 96;
             // 
             // label4
@@ -189,7 +189,7 @@
             this.txtTenLop.Location = new System.Drawing.Point(619, 70);
             this.txtTenLop.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.txtTenLop.Name = "txtTenLop";
-            this.txtTenLop.Size = new System.Drawing.Size(148, 26);
+            this.txtTenLop.Size = new System.Drawing.Size(148, 30);
             this.txtTenLop.TabIndex = 89;
             // 
             // txtMaKhoa
@@ -197,7 +197,7 @@
             this.txtMaKhoa.Location = new System.Drawing.Point(362, 70);
             this.txtMaKhoa.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.txtMaKhoa.Name = "txtMaKhoa";
-            this.txtMaKhoa.Size = new System.Drawing.Size(137, 26);
+            this.txtMaKhoa.Size = new System.Drawing.Size(137, 30);
             this.txtMaKhoa.TabIndex = 90;
             // 
             // txtGhiChu
@@ -206,7 +206,7 @@
             this.txtGhiChu.Location = new System.Drawing.Point(531, 72);
             this.txtGhiChu.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(67, 20);
+            this.txtGhiChu.Size = new System.Drawing.Size(85, 25);
             this.txtGhiChu.TabIndex = 84;
             this.txtGhiChu.Text = "Tên Lớp";
             // 
@@ -216,7 +216,7 @@
             this.label2.Location = new System.Drawing.Point(277, 75);
             this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 20);
+            this.label2.Size = new System.Drawing.Size(92, 25);
             this.label2.TabIndex = 85;
             this.label2.Text = "Mã Khoa";
             // 
@@ -226,7 +226,7 @@
             this.lblMaLop.Location = new System.Drawing.Point(26, 121);
             this.lblMaLop.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblMaLop.Name = "lblMaLop";
-            this.lblMaLop.Size = new System.Drawing.Size(46, 20);
+            this.lblMaLop.Size = new System.Drawing.Size(59, 25);
             this.lblMaLop.TabIndex = 87;
             this.lblMaLop.Text = "Khoa";
             // 
@@ -236,7 +236,7 @@
             this.label1.Location = new System.Drawing.Point(26, 73);
             this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 20);
+            this.label1.Size = new System.Drawing.Size(78, 25);
             this.label1.TabIndex = 88;
             this.label1.Text = "Mã Lớp";
             // 
@@ -261,7 +261,7 @@
             this.txtMaLop.Location = new System.Drawing.Point(118, 72);
             this.txtMaLop.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(124, 26);
+            this.txtMaLop.Size = new System.Drawing.Size(124, 30);
             this.txtMaLop.TabIndex = 92;
             // 
             // label3
@@ -270,7 +270,7 @@
             this.label3.Location = new System.Drawing.Point(277, 121);
             this.label3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 20);
+            this.label3.Size = new System.Drawing.Size(56, 25);
             this.label3.TabIndex = 85;
             this.label3.Text = "Sĩ số";
             // 
@@ -278,13 +278,14 @@
             // 
             this.txtSiso.Location = new System.Drawing.Point(362, 115);
             this.txtSiso.Name = "txtSiso";
-            this.txtSiso.Size = new System.Drawing.Size(137, 26);
+            this.txtSiso.Size = new System.Drawing.Size(137, 30);
             this.txtSiso.TabIndex = 99;
             // 
             // frmQLLop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(804, 538);
             this.Controls.Add(this.cbLoc);
             this.Controls.Add(this.groupBox1);
