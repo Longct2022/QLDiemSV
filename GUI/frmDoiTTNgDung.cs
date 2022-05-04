@@ -22,6 +22,7 @@ namespace QLDiemSV.GUI
 
             gbPasswordChange.Visible = false;
             gbUserInfor.Visible = true;
+            btnPasswordChange.Visible = true;
             btnCancel.Enabled = false;
             btnPasswordChange.Enabled = true;
             btnSave.Enabled = false;
@@ -105,7 +106,7 @@ namespace QLDiemSV.GUI
         private void btnInforChange_Click(object sender, EventArgs e)
         {
             gbUserInfor.Visible = true;
-            btnPasswordChange.Enabled = false;
+            btnPasswordChange.Visible = false;
             btnSave.Enabled = true;
             btnCancel.Enabled = true;
             gbPasswordChange.Visible = false;

@@ -59,9 +59,9 @@
             this.statusStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 581);
+            this.statusStrip.Location = new System.Drawing.Point(0, 692);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1107, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1026, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -83,7 +83,7 @@
             this.mnuAbout});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1107, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1026, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,7 +98,7 @@
             this.mnuThoat});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.hệThốngToolStripMenuItem.Text = "Hệ thống";
+            this.hệThốngToolStripMenuItem.Text = "&Hệ thống";
             // 
             // mnuCapNhatTaiKhoan
             // 
@@ -146,26 +146,26 @@
             this.mnuQLLop});
             this.qLSinhViênToolStripMenuItem.Name = "qLSinhViênToolStripMenuItem";
             this.qLSinhViênToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
-            this.qLSinhViênToolStripMenuItem.Text = "Quản lý";
+            this.qLSinhViênToolStripMenuItem.Text = "&Quản lý";
             this.qLSinhViênToolStripMenuItem.Click += new System.EventHandler(this.qLSinhViênToolStripMenuItem_Click);
             // 
             // mnuQLSV
             // 
             this.mnuQLSV.Name = "mnuQLSV";
-            this.mnuQLSV.Size = new System.Drawing.Size(180, 22);
+            this.mnuQLSV.Size = new System.Drawing.Size(130, 22);
             this.mnuQLSV.Text = "Sinh viên";
             this.mnuQLSV.Click += new System.EventHandler(this.mnuQLSV_Click);
             // 
             // mnuQLGV
             // 
             this.mnuQLGV.Name = "mnuQLGV";
-            this.mnuQLGV.Size = new System.Drawing.Size(180, 22);
+            this.mnuQLGV.Size = new System.Drawing.Size(130, 22);
             this.mnuQLGV.Text = "Giảng viên";
             // 
             // mnuQLLop
             // 
             this.mnuQLLop.Name = "mnuQLLop";
-            this.mnuQLLop.Size = new System.Drawing.Size(180, 22);
+            this.mnuQLLop.Size = new System.Drawing.Size(130, 22);
             this.mnuQLLop.Text = "Lớp";
             this.mnuQLLop.Click += new System.EventHandler(this.mnuQLLop_Click);
             // 
@@ -175,7 +175,7 @@
             this.mnuTimSV});
             this.timKiếmToolStripMenuItem.Name = "timKiếmToolStripMenuItem";
             this.timKiếmToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.timKiếmToolStripMenuItem.Text = "Tim kiếm ";
+            this.timKiếmToolStripMenuItem.Text = "&Tim kiếm ";
             // 
             // mnuTimSV
             // 
@@ -189,7 +189,7 @@
             this.mnuThongKeSV});
             this.thốngKêToolStripMenuItem.Name = "thốngKêToolStripMenuItem";
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
-            this.thốngKêToolStripMenuItem.Text = "Thống kê";
+            this.thốngKêToolStripMenuItem.Text = "Thống &kê";
             // 
             // mnuThongKeSV
             // 
@@ -201,19 +201,20 @@
             // 
             this.mnuTroGiup.Name = "mnuTroGiup";
             this.mnuTroGiup.Size = new System.Drawing.Size(64, 20);
-            this.mnuTroGiup.Text = "Trợ giúp";
+            this.mnuTroGiup.Text = "Trợ &giúp";
             // 
             // mnuAbout
             // 
             this.mnuAbout.Name = "mnuAbout";
             this.mnuAbout.Size = new System.Drawing.Size(52, 20);
-            this.mnuAbout.Text = "About";
+            this.mnuAbout.Text = "&About";
+            this.mnuAbout.Click += new System.EventHandler(this.mnuAbout_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1107, 603);
+            this.ClientSize = new System.Drawing.Size(1026, 714);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;

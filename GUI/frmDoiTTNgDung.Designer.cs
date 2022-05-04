@@ -66,9 +66,9 @@
             this.gbPasswordChange.Controls.Add(this.txtNewPassword);
             this.gbPasswordChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbPasswordChange.ForeColor = System.Drawing.Color.Blue;
-            this.gbPasswordChange.Location = new System.Drawing.Point(13, 328);
+            this.gbPasswordChange.Location = new System.Drawing.Point(12, 14);
             this.gbPasswordChange.Name = "gbPasswordChange";
-            this.gbPasswordChange.Size = new System.Drawing.Size(377, 227);
+            this.gbPasswordChange.Size = new System.Drawing.Size(377, 213);
             this.gbPasswordChange.TabIndex = 9;
             this.gbPasswordChange.TabStop = false;
             this.gbPasswordChange.Text = "Đổi mật khẩu";
@@ -79,7 +79,7 @@
             this.txtCurrentPassword.Name = "txtCurrentPassword";
             this.txtCurrentPassword.PasswordChar = '*';
             this.txtCurrentPassword.Size = new System.Drawing.Size(164, 26);
-            this.txtCurrentPassword.TabIndex = 6;
+            this.txtCurrentPassword.TabIndex = 3;
             // 
             // label1
             // 
@@ -99,7 +99,7 @@
             this.txtNPassowrdConfirm.Name = "txtNPassowrdConfirm";
             this.txtNPassowrdConfirm.PasswordChar = '*';
             this.txtNPassowrdConfirm.Size = new System.Drawing.Size(164, 26);
-            this.txtNPassowrdConfirm.TabIndex = 6;
+            this.txtNPassowrdConfirm.TabIndex = 5;
             // 
             // label8
             // 
@@ -131,21 +131,21 @@
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.PasswordChar = '*';
             this.txtNewPassword.Size = new System.Drawing.Size(164, 26);
-            this.txtNewPassword.TabIndex = 6;
+            this.txtNewPassword.TabIndex = 4;
             // 
             // txtRole
             // 
             this.txtRole.Location = new System.Drawing.Point(197, 261);
             this.txtRole.Name = "txtRole";
             this.txtRole.Size = new System.Drawing.Size(164, 26);
-            this.txtRole.TabIndex = 6;
+            this.txtRole.TabIndex = 8;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(197, 213);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(164, 26);
-            this.txtEmail.TabIndex = 6;
+            this.txtEmail.TabIndex = 7;
             // 
             // txtPhoneNumber
             // 
@@ -159,7 +159,7 @@
             this.txtFullName.Location = new System.Drawing.Point(197, 84);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(164, 26);
-            this.txtFullName.TabIndex = 6;
+            this.txtFullName.TabIndex = 4;
             // 
             // label7
             // 
@@ -178,7 +178,7 @@
             this.txtUser.Location = new System.Drawing.Point(197, 43);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(164, 26);
-            this.txtUser.TabIndex = 6;
+            this.txtUser.TabIndex = 3;
             // 
             // label6
             // 
@@ -221,10 +221,10 @@
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Blue;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnSave.Location = new System.Drawing.Point(402, 230);
+            this.btnSave.Location = new System.Drawing.Point(402, 147);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(168, 32);
-            this.btnSave.TabIndex = 10;
+            this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -234,10 +234,10 @@
             this.btnInforChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInforChange.ForeColor = System.Drawing.Color.Blue;
             this.btnInforChange.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInforChange.Location = new System.Drawing.Point(402, 172);
+            this.btnInforChange.Location = new System.Drawing.Point(402, 37);
             this.btnInforChange.Name = "btnInforChange";
             this.btnInforChange.Size = new System.Drawing.Size(168, 43);
-            this.btnInforChange.TabIndex = 11;
+            this.btnInforChange.TabIndex = 1;
             this.btnInforChange.Text = "Thay đổi thông tin";
             this.btnInforChange.UseVisualStyleBackColor = true;
             this.btnInforChange.Click += new System.EventHandler(this.btnInforChange_Click);
@@ -259,10 +259,10 @@
             this.btnPasswordChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPasswordChange.ForeColor = System.Drawing.Color.Blue;
             this.btnPasswordChange.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPasswordChange.Location = new System.Drawing.Point(402, 118);
+            this.btnPasswordChange.Location = new System.Drawing.Point(402, 92);
             this.btnPasswordChange.Name = "btnPasswordChange";
             this.btnPasswordChange.Size = new System.Drawing.Size(168, 43);
-            this.btnPasswordChange.TabIndex = 12;
+            this.btnPasswordChange.TabIndex = 2;
             this.btnPasswordChange.Text = "Đổi mật khẩu";
             this.btnPasswordChange.UseVisualStyleBackColor = true;
             this.btnPasswordChange.Click += new System.EventHandler(this.btnPasswordChange_Click);
@@ -287,7 +287,7 @@
             this.gbUserInfor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.gbUserInfor.Name = "gbUserInfor";
             this.gbUserInfor.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.gbUserInfor.Size = new System.Drawing.Size(377, 306);
+            this.gbUserInfor.Size = new System.Drawing.Size(377, 301);
             this.gbUserInfor.TabIndex = 8;
             this.gbUserInfor.TabStop = false;
             this.gbUserInfor.Text = "Thông tin tài khoản";
@@ -301,7 +301,7 @@
             this.cboSex.Location = new System.Drawing.Point(197, 127);
             this.cboSex.Name = "cboSex";
             this.cboSex.Size = new System.Drawing.Size(164, 28);
-            this.cboSex.TabIndex = 7;
+            this.cboSex.TabIndex = 5;
             // 
             // label2
             // 
@@ -320,7 +320,7 @@
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Blue;
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnCancel.Location = new System.Drawing.Point(402, 275);
+            this.btnCancel.Location = new System.Drawing.Point(402, 192);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(168, 32);
             this.btnCancel.TabIndex = 10;
@@ -332,13 +332,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(578, 569);
+            this.ClientSize = new System.Drawing.Size(578, 330);
             this.Controls.Add(this.gbPasswordChange);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnInforChange);
             this.Controls.Add(this.btnPasswordChange);
             this.Controls.Add(this.gbUserInfor);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmDoiTTNgDung";
             this.Text = "frmDoiTTNgDung";
             this.Load += new System.EventHandler(this.frmDoiTTNgDung_Load);

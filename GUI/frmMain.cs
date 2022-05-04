@@ -123,7 +123,8 @@ namespace QLDiemSV.GUI
         private void mnuQLNguoiDung_Click(object sender, EventArgs e)
         {
             frmQLNguoiDung f = new frmQLNguoiDung();
-            //f.MdiParent = this;
+            f.MdiParent = this;
+            f.WindowState = FormWindowState.Maximized;
             f.Show();
         }
 
@@ -152,12 +153,23 @@ namespace QLDiemSV.GUI
         private void mnuQLSV_Click(object sender, EventArgs e)
         {
             frmQLSinhVien f = new frmQLSinhVien();
+            f.MdiParent = this;
+            f.WindowState = FormWindowState.Maximized;
             f.Show();
         }
 
         private void mnuQLLop_Click(object sender, EventArgs e)
         {
             frmQLLop f = new frmQLLop();
+            f.MdiParent = this;
+            f.WindowState = FormWindowState.Maximized;
+            f.Show();
+            
+        }
+
+        private void mnuAbout_Click(object sender, EventArgs e)
+        {
+            frmAbout f = new frmAbout();
             f.Show();
         }
     }

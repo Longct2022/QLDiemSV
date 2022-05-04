@@ -7,7 +7,7 @@ namespace QLDiemSV.DAO
     public class LopDAO
     {
         readonly DataHelper dh;
-        //DataTable dt;
+        DataTable dt;
         public LopDAO(string sqlcon)
         {
             dh = new DataHelper(Program.strcon);
