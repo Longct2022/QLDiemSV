@@ -1,4 +1,9 @@
-﻿using System.Data;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace QLDiemSV.DAO
@@ -10,7 +15,7 @@ namespace QLDiemSV.DAO
         public DataHelper(string sqlcon)
         {
             conn = new SqlConnection(sqlcon);
-            this.sqlcon = sqlcon;         
+            this.sqlcon = sqlcon;
         }
         /// <summary>
         /// 
@@ -21,8 +26,8 @@ namespace QLDiemSV.DAO
         {
             DataTable dt = new DataTable();
             // Tạo một SqlAdapter kết nối vói CSDL thông qua câu lệnh sqlselect và chuỗi kết nối sqlcon
-            // Dùng phương thức Fill của DataTable để điền dữ liệu vào bảng 
             SqlDataAdapter adapter = new SqlDataAdapter(sqlselect, sqlcon);
+            // Dùng phương thức Fill của DataTable để điền dữ liệu vào bảng 
             adapter.Fill(dt);
             return dt;
         }
@@ -31,14 +36,14 @@ namespace QLDiemSV.DAO
         /// </summary>
         /// <param name="dt">DataTable</param>
         /// <param name="values">Các giá trị được truyền vào</param>
-        public void AddRow(DataTable dt, params object [] values)
+        public void AddRow(DataTable dt, params object[] values)
         {
             DataRow dr = dt.NewRow();
             for (int i = 0; i < values.Length; i++)
             {
                 dr[i] = values[i];
-            }    
-            dt.Rows.Add(dr);              
+            }
+            dt.Rows.Add(dr);
         }
         /// <summary>
         /// Phương thức lọc bản ghi thỏa mãn điều kiện
@@ -48,7 +53,7 @@ namespace QLDiemSV.DAO
         /// <returns></returns>
         public DataView Filter(DataTable dt, string dk)
         {
-            DataView dv = new DataView();
+            DataView dv = new DataView(dt);
             dv.RowFilter = dk;
             return dv;
         }
@@ -63,8 +68,10 @@ namespace QLDiemSV.DAO
             DataView dv = Filter(dt, dk);
             dv.AllowEdit = true;
             if (dv.Count > 0)
+            {
                 for (int i = 0; i < values.Length; i++)
                     dv[0][i] = values[i];
+            }
         }
         /// <summary>
         /// 
@@ -78,17 +85,15 @@ namespace QLDiemSV.DAO
             // SqlCommandBuilder sẽ đọc câu SQL select (lấy từ SqlDataAdapter),
             // từ đó suy ra các lệnh insert, update và delete, sau đó gán các lệnh mới
             // vào các property Insert, Update, Delete của SqlDataAdapter tương ứng.
-            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+            SqlCommandBuilder cmd = new SqlCommandBuilder(da);
             da.Update(dt);
         }
         public void DeleteRows(DataTable dt, string dk)
         {
             DataView dv = Filter(dt, dk);
-            dv.AllowEdit = true;
+            dv.AllowDelete = true;
             while (dv.Count > 0)
-            {
                 dv[0].Delete();
-            }
         }
 
     }

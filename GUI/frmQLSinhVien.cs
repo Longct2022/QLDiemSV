@@ -82,14 +82,14 @@ namespace QLDiemSV.GUI
             {
                 MessageBox.Show("Mã sinh viên không tồn tại !", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMaSV.Focus();
-            }    
+            }
             else
             {
                 if (MessageBox.Show("Bạn có muốn xóa tài khoản " + txtMaSV.Text.ToString() + " không Y/N", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     int currentRow = lsv.FindIndex(s => s.MaSV == txtMaSV.Text);
                     if (currentRow == 0) currentRow = 1;
-                    bus.XoaSV(txtMaSV.Text);
+                    bus.XoaSV(sv);
                     SinhVien delUser = lsv.Find(s => s.MaSV == txtMaSV.Text);
                     lsv.Remove(delUser);
                     MessageBox.Show("Đã xóa tài khoản " + txtMaSV.Text);
@@ -121,7 +121,7 @@ namespace QLDiemSV.GUI
             {
                 cboLoc.Enabled = false;
                 cboLoc.SelectedIndex = -1;
-            }                
+            }
         }
 
         private void cboLocMaLop_SelectedIndexChanged(object sender, EventArgs e)
@@ -193,8 +193,13 @@ namespace QLDiemSV.GUI
                     };
 
 
-                    bus.SuaSV(esv);
                     SinhVien sv = lsv.Find(us => us.MaSV == esv.MaSV);
+
+                    if (sv.MaLop == cboMaLop.Text)  // Trường hợp không thay đổi lớp
+                        bus.SuaSV(esv, sv.MaLop);  
+                    else
+                        bus.SuaSV(esv, sv.MaLop);   //Có thay đổi lớp, Bổ sung thêm thông tin mã lớp hiện tại vào để sửa sĩ số cho mã lớp này
+
                     sv.MaSV = txtMaSV.Text;
                     sv.MaLop = cboMaLop.Text;
                     sv.HoTen = txtHoTen.Text;

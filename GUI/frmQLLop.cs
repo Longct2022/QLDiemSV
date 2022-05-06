@@ -41,7 +41,7 @@ namespace QLDiemSV.GUI
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             txtMaLop.Text = dgv.CurrentRow.Cells["MaLop"].Value.ToString();
-            txtMaKhoa.Text = dgv.CurrentRow.Cells["MaKhoa"].Value.ToString();
+            cboKhoa.Text = dgv.CurrentRow.Cells["MaKhoa"].Value.ToString();
             txtTenLop.Text = dgv.CurrentRow.Cells["TenLop"].Value.ToString();
             txtSiso.Text = dgv.CurrentRow.Cells["SiSo"].Value.ToString();
         }
@@ -218,6 +218,8 @@ namespace QLDiemSV.GUI
             btnXoa.Enabled = true;
             btnHuy.Enabled = true;
         }
+
+
     }
     
 }

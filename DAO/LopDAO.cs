@@ -28,45 +28,60 @@ namespace QLDiemSV.DAO
             };
             return llop;
         }
-    public List<Lop> LayDSLop(string khoa)
-    {
-        List<Lop> llop = new List<Lop>();
-        dt = dh.FillDataTable("select * from LOP where MaKhoa = '" + khoa + "'");
-        foreach (DataRow dr in dt.Rows)
+        public List<Lop> LayDSLop(string khoa)
         {
-            llop.Add(new Lop
+            List<Lop> llop = new List<Lop>();
+            dt = dh.FillDataTable("select * from LOP where MaKhoa = '" + khoa + "'");
+            foreach (DataRow dr in dt.Rows)
             {
-                MaLop = dr["MaLop"].ToString(),
-                MaKhoa = dr["MaKhoa"].ToString(),
-                TenLop = dr["TenLop"].ToString(),
-                SiSo = int.Parse(dr["SiSo"].ToString())
-            });
+                llop.Add(new Lop
+                {
+                    MaLop = dr["MaLop"].ToString(),
+                    MaKhoa = dr["MaKhoa"].ToString(),
+                    TenLop = dr["TenLop"].ToString(),
+                    SiSo = int.Parse(dr["SiSo"].ToString())
+                });
+            }
+            return llop;
         }
-        return llop;
+        public void ThemLop(Lop lop)
+        {
+            dh.AddRow(dt, lop.MaLop, lop.MaLop, lop.TenLop, lop.SiSo);
+            dh.UpdateDataTableToDatabase(dt, "LOP");
+        }
+        public void SuaLop(Lop lop)
+        {
+            dh.EditRow(dt, "MaLop = " + lop.MaLop + "'", lop.MaKhoa, lop.MaLop, lop.TenLop, lop.SiSo);
+            dh.UpdateDataTableToDatabase(dt, "LOP");
+        }
+        public void SuaSiSo(int sua, string maLop)
+        {
+            DataView dv = dh.Filter(dt, "MaLop = '" + maLop + "'");
+            dv.AllowEdit = true;
+
+            int siSo = int.Parse(dv[0]["SiSo"].ToString());
+            dv[0]["SiSo"] = siSo + sua;
+
+            dh.UpdateDataTableToDatabase(dt, "LOP");
+        }
+        public void SuaSiSo(int sua, string maLopMoi, string maLopHT)
+        {
+            DataView dv = dh.Filter(dt, "MaLop = '" + maLopHT + "'");
+            dv.AllowEdit = true;
+
+            int siSo = int.Parse(dv[0]["SiSo"].ToString());
+            dv[0]["SiSo"] = siSo - sua;
+
+            dv = dh.Filter(dt, "MaLop = '" + maLopMoi + "'");
+            siSo = int.Parse(dv[0]["SiSo"].ToString());
+            dv[0]["SiSo"] = siSo + sua;
+
+            dh.UpdateDataTableToDatabase(dt, "LOP");
+        }
+        public void XoaLop(string malop)
+        {
+            dh.DeleteRows(dt, "MaLop = '" + malop + "'");
+            dh.UpdateDataTableToDatabase(dt, "LOP");
+        }
     }
-    public void ThemLop(Lop lop)
-    {
-        dh.AddRow(dt, lop.MaLop, lop.MaLop, lop.TenLop, lop.SiSo);
-        dh.UpdateDataTableToDatabase(dt, "LOP");
-    }
-    public void SuaLop(Lop lop)
-    {
-        dh.EditRow(dt, "MaLop = " + lop.MaLop + "'", lop.MaKhoa, lop.MaLop, lop.TenLop, lop.SiSo);
-        dh.UpdateDataTableToDatabase(dt, "LOP");
-    }
-    public void SuaSiSo(int sua, string maLop)
-    {
-        DataView dv = dh.Filter(dt, "MaLop = '" + maLop + "'");
-        dv.AllowEdit = true;
-        Lop l = new Lop();
-        l.SiSo += sua;
-        dv[0][3] = l.SiSo;
-        dh.UpdateDataTableToDatabase(dt, "LOP");
-    }
-    public void XoaLop(string malop)
-    {
-        dh.DeleteRows(dt, "MaLop = '" + malop + "'");
-        dh.UpdateDataTableToDatabase(dt, "LOP");
-    }
-}
 }

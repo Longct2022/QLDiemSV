@@ -31,13 +31,20 @@ namespace QLDiemSV.BUS
             svDAO.ThemSV(sv);
             lopDAO.SuaSiSo(1, sv.MaLop);
         }
-        public void XoaSV(string maSV)
+        public void XoaSV(SinhVien sv)
         {
-            svDAO.XoaSV(maSV);
+            svDAO.XoaSV(sv.MaSV);
+            lopDAO.SuaSiSo(-1, sv.MaLop);
         }
         public void SuaSV(SinhVien sv)
         {
             svDAO.SuaSV(sv);
+            lopDAO.SuaSiSo(-1, sv.MaLop);
+        }
+        public void SuaSV(SinhVien sv, string maLopHienTai)
+        {
+            svDAO.SuaSV(sv);
+            lopDAO.SuaSiSo(-1, sv.MaLop, maLopHienTai);
         }
 
     }

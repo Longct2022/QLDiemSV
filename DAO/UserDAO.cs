@@ -62,6 +62,7 @@ namespace QLDiemSV.DAO
 
         public void XoaUser(string userID)
         {
+            dt = dh.FillDataTable("select * from UserList");
             dh.DeleteRows(dt, "UserID = '" + userID + "'");
             dh.UpdateDataTableToDatabase(dt, "UserList");
         }

@@ -39,9 +39,7 @@
             this.cboKhoa = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTenLop = new System.Windows.Forms.TextBox();
-            this.txtMaKhoa = new System.Windows.Forms.TextBox();
             this.txtGhiChu = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lblMaLop = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv = new System.Windows.Forms.DataGridView();
@@ -55,10 +53,10 @@
             // cbLoc
             // 
             this.cbLoc.AutoSize = true;
-            this.cbLoc.Location = new System.Drawing.Point(523, 117);
+            this.cbLoc.Location = new System.Drawing.Point(459, 117);
             this.cbLoc.Name = "cbLoc";
             this.cbLoc.Size = new System.Drawing.Size(190, 29);
-            this.cbLoc.TabIndex = 98;
+            this.cbLoc.TabIndex = 5;
             this.cbLoc.Text = "Lọc SV theo khoa";
             this.cbLoc.UseVisualStyleBackColor = true;
             this.cbLoc.CheckedChanged += new System.EventHandler(this.cbLoc_CheckedChanged);
@@ -87,7 +85,7 @@
             this.btnHuy.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(100, 50);
-            this.btnHuy.TabIndex = 26;
+            this.btnHuy.TabIndex = 11;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
@@ -100,7 +98,7 @@
             this.btnMoi.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.btnMoi.Name = "btnMoi";
             this.btnMoi.Size = new System.Drawing.Size(100, 50);
-            this.btnMoi.TabIndex = 26;
+            this.btnMoi.TabIndex = 7;
             this.btnMoi.Text = "Thêm mới";
             this.btnMoi.UseVisualStyleBackColor = true;
             this.btnMoi.Click += new System.EventHandler(this.btnMoi_Click);
@@ -113,7 +111,7 @@
             this.btnLuu.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(100, 50);
-            this.btnLuu.TabIndex = 27;
+            this.btnLuu.TabIndex = 10;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
@@ -126,7 +124,7 @@
             this.btnSua.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 50);
-            this.btnSua.TabIndex = 25;
+            this.btnSua.TabIndex = 8;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
@@ -139,7 +137,7 @@
             this.btnXoa.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 50);
-            this.btnXoa.TabIndex = 24;
+            this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -154,7 +152,7 @@
             this.cboLoc.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.cboLoc.Name = "cboLoc";
             this.cboLoc.Size = new System.Drawing.Size(78, 33);
-            this.cboLoc.TabIndex = 94;
+            this.cboLoc.TabIndex = 6;
             this.cboLoc.SelectedIndexChanged += new System.EventHandler(this.cboLoc_SelectedIndexChanged);
             // 
             // cboKhoa
@@ -163,11 +161,11 @@
             this.cboKhoa.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cboKhoa.Location = new System.Drawing.Point(118, 116);
+            this.cboKhoa.Location = new System.Drawing.Point(375, 69);
             this.cboKhoa.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.cboKhoa.Name = "cboKhoa";
             this.cboKhoa.Size = new System.Drawing.Size(124, 33);
-            this.cboKhoa.TabIndex = 96;
+            this.cboKhoa.TabIndex = 2;
             // 
             // label4
             // 
@@ -190,15 +188,7 @@
             this.txtTenLop.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.txtTenLop.Name = "txtTenLop";
             this.txtTenLop.Size = new System.Drawing.Size(148, 30);
-            this.txtTenLop.TabIndex = 89;
-            // 
-            // txtMaKhoa
-            // 
-            this.txtMaKhoa.Location = new System.Drawing.Point(362, 70);
-            this.txtMaKhoa.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
-            this.txtMaKhoa.Name = "txtMaKhoa";
-            this.txtMaKhoa.Size = new System.Drawing.Size(137, 30);
-            this.txtMaKhoa.TabIndex = 90;
+            this.txtTenLop.TabIndex = 3;
             // 
             // txtGhiChu
             // 
@@ -210,20 +200,10 @@
             this.txtGhiChu.TabIndex = 84;
             this.txtGhiChu.Text = "Tên Lớp";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(277, 75);
-            this.label2.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 25);
-            this.label2.TabIndex = 85;
-            this.label2.Text = "Mã Khoa";
-            // 
             // lblMaLop
             // 
             this.lblMaLop.AutoSize = true;
-            this.lblMaLop.Location = new System.Drawing.Point(26, 121);
+            this.lblMaLop.Location = new System.Drawing.Point(283, 74);
             this.lblMaLop.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.lblMaLop.Name = "lblMaLop";
             this.lblMaLop.Size = new System.Drawing.Size(59, 25);
@@ -262,12 +242,12 @@
             this.txtMaLop.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.txtMaLop.Name = "txtMaLop";
             this.txtMaLop.Size = new System.Drawing.Size(124, 30);
-            this.txtMaLop.TabIndex = 92;
+            this.txtMaLop.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(277, 121);
+            this.label3.Location = new System.Drawing.Point(26, 121);
             this.label3.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 25);
@@ -276,10 +256,10 @@
             // 
             // txtSiso
             // 
-            this.txtSiso.Location = new System.Drawing.Point(362, 115);
+            this.txtSiso.Location = new System.Drawing.Point(118, 115);
             this.txtSiso.Name = "txtSiso";
-            this.txtSiso.Size = new System.Drawing.Size(137, 30);
-            this.txtSiso.TabIndex = 99;
+            this.txtSiso.Size = new System.Drawing.Size(124, 30);
+            this.txtSiso.TabIndex = 4;
             // 
             // frmQLLop
             // 
@@ -294,10 +274,8 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtTenLop);
             this.Controls.Add(this.txtSiso);
-            this.Controls.Add(this.txtMaKhoa);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtGhiChu);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.lblMaLop);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv);
@@ -327,9 +305,7 @@
         private System.Windows.Forms.ComboBox cboKhoa;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTenLop;
-        private System.Windows.Forms.TextBox txtMaKhoa;
         private System.Windows.Forms.Label txtGhiChu;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblMaLop;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv;
