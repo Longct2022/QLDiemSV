@@ -69,6 +69,7 @@ namespace QLDiemSV.GUI
             btnHuy.Enabled = true;
             btnXoa.Enabled = false;
         }
+        //
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
