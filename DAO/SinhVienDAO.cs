@@ -8,7 +8,7 @@ namespace QLDiemSV.DAO
     public class SinhVienDAO
     {
         readonly DataHelper dh;
-        DataTable dt = new DataTable();
+        DataTable dt;// = new DataTable();
         public SinhVienDAO(string sqlcon)
         {
             dh = new DataHelper(sqlcon);
@@ -16,8 +16,9 @@ namespace QLDiemSV.DAO
         public List<SinhVien> LayDSSinhVien()
         {
             List<SinhVien> lsv = new List<SinhVien>();
-            var rows = dh.FillDataTable("select * from SINH_VIEN").Rows;
-            foreach (DataRow dr in rows)
+            dt = dh.FillDataTable("select * from SINH_VIEN");
+            //var rows = dh.FillDataTable("select * from SINH_VIEN").Rows;
+            foreach (DataRow dr in dt.Rows)
             {          
                 lsv.Add(new SinhVien
                 {
