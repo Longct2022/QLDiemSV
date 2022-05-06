@@ -6,11 +6,10 @@ namespace QLDiemSV.BUS
 {
     public class LoginBUS
     {
-        readonly DataHelper dh;
+        DataHelper dh;
         public LoginBUS(string sqlcon)
         {
             dh = new DataHelper(sqlcon);
-
         }
 
         /// <summary>
@@ -22,8 +21,8 @@ namespace QLDiemSV.BUS
         /// <returns></returns>
         public Users GetUsers(string un, string pw)
         {
-            //DataTable dt = dh.FillDataTable("SELECT * from UserList WHERE UserID = '" + un + "' and Password = '" + pw + "'");
-            var dt = dh.FillDataTable($"select * from userList where userId = '{un}' and password = '{pw}'");
+            DataTable dt = dh.FillDataTable("SELECT * from UserList WHERE UserID = '" + un + "' and Password = '" + pw + "'");
+            //var dt = dh.FillDataTable($"select * from userList where userId = '{un}' and password = '{pw}'");
             if (dt.Rows.Count > 0)
                 return new Users
                 {

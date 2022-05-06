@@ -6,9 +6,9 @@ namespace QLDiemSV.BUS
 {
     public class QLSinhVienBUS
     {
-        private readonly DataHelper dh;
-        readonly SinhVienDAO svDAO = new SinhVienDAO(Program.strcon);
-        readonly LopDAO lopDAO = new LopDAO(Program.strcon);
+        DataHelper dh;
+        SinhVienDAO svDAO = new SinhVienDAO(Program.strcon);
+        LopDAO lopDAO = new LopDAO(Program.strcon);
         public QLSinhVienBUS(string strcon)
         {
             dh = new DataHelper(strcon);

@@ -8,8 +8,8 @@ namespace QLDiemSV.DAO
     public class UserDAO
     {
         // Tạo một đối tượng DataHelper để làm việc với Database
-        readonly DataHelper dh;
-        readonly DataTable dt;
+        DataHelper dh;
+        DataTable dt;
 
         /// <summary>
         /// Hàm tạo UserDao
@@ -22,8 +22,8 @@ namespace QLDiemSV.DAO
         public List<Users> LayUsers()
         {
             List<Users> l = new List<Users>();
-            var rows = dh.FillDataTable("select * from UserList").Rows;
-            foreach (DataRow dr in rows)
+            dt = dh.FillDataTable("select * from UserList");
+            foreach (DataRow dr in dt.Rows)
                 l.Add(new Users
                 {
                     UserID = dr["UserID"].ToString(),
@@ -33,9 +33,20 @@ namespace QLDiemSV.DAO
                     Role = dr["Role"].ToString(),
                     PhoneNumber = dr["Phone"].ToString()
                 });
+            //Có thể thay thế cho dòng code dưới đây
+            //{
+            //    Users user = new Users();
+            //    user.UserID = dr["UserID"].ToString();
+            //    user.Password = dr["Password"].ToString();
+            //    user.Sex = dr["Sex"].ToString();
+            //    user.FullName = dr["FullName"].ToString();
+            //    user.FullName = dr["FullName"].ToString();
+            //    user.Role = dr["Role"].ToString();
+            //    user.PhoneNumber = dr["Phone"].ToString();
+            //    l.Add(user);
+            //}
             return l;
         }
-
         public void SuaUser(Users u)
         {
             //dt = dh.FillDataTable("select * from UserList");
@@ -54,9 +65,5 @@ namespace QLDiemSV.DAO
             dh.DeleteRows(dt, "UserID = '" + userID + "'");
             dh.UpdateDataTableToDatabase(dt, "UserList");
         }
-
-        //(string sqlcon)
-
-
     }
 }

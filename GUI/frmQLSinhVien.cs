@@ -180,7 +180,7 @@ namespace QLDiemSV.GUI
                         dgv.CurrentCell = dgv.Rows[dgv.Rows.Count - 1].Cells[0];
                     }
                 }
-                else if (flag == 1)
+                else if (flag == 1) // Trường hợp sửa thông tin SV
                 {
                     SinhVien esv = new SinhVien
                     {

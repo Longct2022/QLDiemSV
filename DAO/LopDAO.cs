@@ -6,7 +6,7 @@ namespace QLDiemSV.DAO
 {
     public class LopDAO
     {
-        readonly DataHelper dh;
+        DataHelper dh;
         DataTable dt;
         public LopDAO(string sqlcon)
         {
@@ -16,8 +16,8 @@ namespace QLDiemSV.DAO
         public List<Lop> LayDSLop()
         {
             List<Lop> llop = new List<Lop>();
-            var rows = dh.FillDataTable("select * from LOP").Rows;
-            foreach (DataRow dr in rows)
+            dt = dh.FillDataTable("select * from LOP");
+            foreach (DataRow dr in dt.Rows)
             {
                 Lop lop = new Lop();
                 lop.MaLop = dr["MaLop"].ToString();
@@ -46,7 +46,7 @@ namespace QLDiemSV.DAO
     }
     public void ThemLop(Lop lop)
     {
-        dh.AddRow(dt, lop.MaLop, lop.MaLop, lop.TenLop);
+        dh.AddRow(dt, lop.MaLop, lop.MaLop, lop.TenLop, lop.SiSo);
         dh.UpdateDataTableToDatabase(dt, "LOP");
     }
     public void SuaLop(Lop lop)

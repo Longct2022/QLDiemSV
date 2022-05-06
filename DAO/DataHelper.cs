@@ -5,8 +5,8 @@ namespace QLDiemSV.DAO
 {
     public class DataHelper
     {
-        readonly string sqlcon;
-        readonly SqlConnection conn = null;
+        string sqlcon;
+        SqlConnection conn = null;
         public DataHelper(string sqlcon)
         {
             conn = new SqlConnection(sqlcon);
@@ -22,7 +22,8 @@ namespace QLDiemSV.DAO
             DataTable dt = new DataTable();
             // Tạo một SqlAdapter kết nối vói CSDL thông qua câu lệnh sqlselect và chuỗi kết nối sqlcon
             // Dùng phương thức Fill của DataTable để điền dữ liệu vào bảng 
-            new SqlDataAdapter(sqlselect, sqlcon).Fill(dt);
+            SqlDataAdapter adapter = new SqlDataAdapter(sqlselect, sqlcon);
+            adapter.Fill(dt);
             return dt;
         }
         /// <summary>
@@ -47,10 +48,9 @@ namespace QLDiemSV.DAO
         /// <returns></returns>
         public DataView Filter(DataTable dt, string dk)
         {
-            return new DataView(dt)
-            {
-                RowFilter = dk
-            };
+            DataView dv = new DataView();
+            dv.RowFilter = dk;
+            return dv;
         }
         /// <summary>
         /// Thay thế một dòng trong DataTable theo điều kiện
@@ -63,10 +63,8 @@ namespace QLDiemSV.DAO
             DataView dv = Filter(dt, dk);
             dv.AllowEdit = true;
             if (dv.Count > 0)
-            {
                 for (int i = 0; i < values.Length; i++)
                     dv[0][i] = values[i];
-            }    
         }
         /// <summary>
         /// 
@@ -80,15 +78,17 @@ namespace QLDiemSV.DAO
             // SqlCommandBuilder sẽ đọc câu SQL select (lấy từ SqlDataAdapter),
             // từ đó suy ra các lệnh insert, update và delete, sau đó gán các lệnh mới
             // vào các property Insert, Update, Delete của SqlDataAdapter tương ứng.
-            _ = new SqlCommandBuilder(da);
+            SqlCommandBuilder cb = new SqlCommandBuilder(da);
             da.Update(dt);
         }
         public void DeleteRows(DataTable dt, string dk)
         {
             DataView dv = Filter(dt, dk);
-            dv.AllowDelete = true;
+            dv.AllowEdit = true;
             while (dv.Count > 0)
+            {
                 dv[0].Delete();
+            }
         }
 
     }

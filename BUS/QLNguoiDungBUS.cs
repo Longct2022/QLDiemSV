@@ -6,8 +6,8 @@ namespace QLDiemSV.BUS
 {
     public class QLNguoiDungBUS
     {
-        private readonly DataHelper dh;
-        readonly UserDAO ud = new UserDAO(Program.strcon);
+        DataHelper dh;
+        UserDAO ud = new UserDAO(Program.strcon);
         public QLNguoiDungBUS(string sqlcon)
         {
             dh = new DataHelper(sqlcon);

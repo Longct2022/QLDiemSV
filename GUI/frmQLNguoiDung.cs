@@ -11,7 +11,7 @@ namespace QLDiemSV.GUI
     public partial class frmQLNguoiDung : Form
     {
         List<Users> lus;
-        readonly QLNguoiDungBUS bus = new QLNguoiDungBUS(Program.strcon);
+        QLNguoiDungBUS bus = new QLNguoiDungBUS(Program.strcon);
 
         public frmQLNguoiDung()
         {
@@ -82,7 +82,6 @@ namespace QLDiemSV.GUI
                             nuser.Role = "Member";
                         }
                         else nuser.Role = cboRole.SelectedItem.ToString();
-
 
                         bus.ThemUser(nuser);
                         lus.Add(nuser);
