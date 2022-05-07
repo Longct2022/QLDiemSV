@@ -68,15 +68,18 @@
   <ItemGroup>
     <Compile Include="BUS\CapNhatTKBUS.cs" />
     <Compile Include="BUS\LoginBUS.cs" />
+    <Compile Include="BUS\QLGiangVienBUS.cs" />
     <Compile Include="BUS\QLKhoaBUS.cs" />
     <Compile Include="BUS\QLLopBUS.cs" />
     <Compile Include="BUS\QLNguoiDungBUS.cs" />
     <Compile Include="BUS\QLSinhVienBUS.cs" />
     <Compile Include="DAO\DataHelper.cs" />
+    <Compile Include="DAO\GiangVienDAO.cs" />
     <Compile Include="DAO\KhoaDAO.cs" />
     <Compile Include="DAO\LopDAO.cs" />
     <Compile Include="DAO\SinhVienDAO.cs" />
     <Compile Include="DAO\UserDAO.cs" />
+    <Compile Include="Entities\GiangVien.cs" />
     <Compile Include="Entities\Khoa.cs" />
     <Compile Include="Entities\Lop.cs" />
     <Compile Include="Entities\SinhVien.cs" />
@@ -110,6 +113,12 @@
     </Compile>
     <Compile Include="GUI\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmQLGiangVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQLGiangVien.Designer.cs">
+      <DependentUpon>frmQLGiangVien.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmQLLop.cs">
       <SubType>Form</SubType>

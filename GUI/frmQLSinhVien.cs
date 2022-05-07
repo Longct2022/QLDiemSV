@@ -63,6 +63,7 @@ namespace QLDiemSV.GUI
         private void btnSua_Click(object sender, EventArgs e)
         {
             flag = 1;
+            cbLoc.Checked = false;
             txtMaSV.Enabled = false;
             btnSua.Enabled = false;
             btnLuu.Enabled = true;
@@ -199,7 +200,11 @@ namespace QLDiemSV.GUI
                     if (sv.MaLop == cboMaLop.Text)  // Trường hợp không thay đổi lớp
                         bus.SuaSV(esv, sv.MaLop);  
                     else
+                    {
                         bus.SuaSV(esv, sv.MaLop);   //Có thay đổi lớp, Bổ sung thêm thông tin mã lớp hiện tại vào để sửa sĩ số cho mã lớp này
+                    }    
+                        
+                        
 
                     sv.MaSV = txtMaSV.Text;
                     sv.MaLop = cboMaLop.Text;

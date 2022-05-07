@@ -172,5 +172,13 @@ namespace QLDiemSV.GUI
             frmAbout f = new frmAbout();
             f.Show();
         }
+
+        private void mnuQLGV_Click(object sender, EventArgs e)
+        {
+            frmQLGiangVien f = new frmQLGiangVien();
+            f.MdiParent= this;
+            f.WindowState= FormWindowState.Maximized;
+            f.Show();
+        }
     }
 }
