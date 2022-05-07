@@ -73,67 +73,72 @@ namespace QLDiemSV.GUI
             // 
             // btnHuy
             // 
+            this.btnHuy.BackColor = System.Drawing.Color.Lavender;
             this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnHuy.ForeColor = System.Drawing.Color.DarkRed;
             this.btnHuy.Location = new System.Drawing.Point(684, 12);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(100, 50);
             this.btnHuy.TabIndex = 26;
             this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnMoi
             // 
+            this.btnMoi.BackColor = System.Drawing.Color.Lavender;
             this.btnMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMoi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnMoi.ForeColor = System.Drawing.Color.DarkRed;
             this.btnMoi.Location = new System.Drawing.Point(85, 12);
             this.btnMoi.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.btnMoi.Name = "btnMoi";
             this.btnMoi.Size = new System.Drawing.Size(100, 50);
             this.btnMoi.TabIndex = 26;
             this.btnMoi.Text = "Thêm mới";
-            this.btnMoi.UseVisualStyleBackColor = true;
+            this.btnMoi.UseVisualStyleBackColor = false;
             this.btnMoi.Click += new System.EventHandler(this.btnMoi_Click);
             // 
             // btnLuu
             // 
+            this.btnLuu.BackColor = System.Drawing.Color.Lavender;
             this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnLuu.ForeColor = System.Drawing.Color.DarkRed;
             this.btnLuu.Location = new System.Drawing.Point(524, 13);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(100, 50);
             this.btnLuu.TabIndex = 27;
             this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.UseVisualStyleBackColor = false;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnSua
             // 
+            this.btnSua.BackColor = System.Drawing.Color.Lavender;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnSua.ForeColor = System.Drawing.Color.DarkRed;
             this.btnSua.Location = new System.Drawing.Point(221, 12);
             this.btnSua.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 50);
             this.btnSua.TabIndex = 25;
             this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
+            this.btnXoa.BackColor = System.Drawing.Color.Lavender;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnXoa.ForeColor = System.Drawing.Color.DarkRed;
             this.btnXoa.Location = new System.Drawing.Point(370, 13);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(8, 10, 8, 10);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 50);
             this.btnXoa.TabIndex = 24;
             this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // cboSex
@@ -284,7 +289,7 @@ namespace QLDiemSV.GUI
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.PowderBlue;
+            this.label4.BackColor = System.Drawing.Color.LightSteelBlue;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -301,7 +306,7 @@ namespace QLDiemSV.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PowderBlue;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(834, 496);
             this.Controls.Add(this.cbLoc);
             this.Controls.Add(this.groupBox1);

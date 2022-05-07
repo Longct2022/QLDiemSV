@@ -61,3 +61,4 @@ D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.exe
 D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.pdb
 D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.GUI.frmQLLop.resources
 D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.GUI.frmAbout.resources
+D:\GitHub\QLDiemSV\obj\Debug\QLDiemSV.GUI.frmQLGiangVien.resources

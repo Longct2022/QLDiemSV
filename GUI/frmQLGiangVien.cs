@@ -25,6 +25,32 @@ namespace QLDiemSV.GUI
             InitializeComponent();
         }
 
+        private void frmQLGiangVien_Load(object sender, EventArgs e)
+        {
+            lgv = bus.LayDSGiangVien();
+            dgv.DataSource = lgv;
+            btnHuy.Enabled = false;
+            btnLuu.Enabled = false;
+            btnMoi.Enabled = true;
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
+            cboMaKhoa.DataSource = bus.LayDSKhoa();
+            cboMaKhoa.DisplayMember = "MaKhoa";
+            cboLoc.Enabled = false;
+            cbLoc.Checked = false;
+        }
+
+        private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaGV.Text = dgv.CurrentRow.Cells["MaGV"].Value.ToString();
+            txtTenGV.Text = dgv.CurrentRow.Cells["TenGV"].Value.ToString();
+            txtPhone.Text = dgv.CurrentRow.Cells["Phone"].Value.ToString();
+            cboMaKhoa.Text = dgv.CurrentRow.Cells["MaKhoa"].Value.ToString();
+            cboPLGiangVien.Text = dgv.CurrentRow.Cells["PhanLoaiGV"].Value.ToString();
+            txtEmail.Text = dgv.CurrentRow.Cells["Email"].Value.ToString();
+            cboSex.Text = dgv.CurrentRow.Cells["GioiTinh"].Value.ToString();
+        }
+
         private void btnMoi_Click(object sender, EventArgs e)
         {
             flag = 0;
@@ -46,6 +72,7 @@ namespace QLDiemSV.GUI
         {
             flag = 1;
             txtMaGV.Enabled = false;
+            btnMoi.Enabled = false;
             btnSua.Enabled = false;
             btnLuu.Enabled = true;
             btnHuy.Enabled = true;
@@ -72,8 +99,8 @@ namespace QLDiemSV.GUI
                     int currentRow = lgv.FindIndex(g => g.MaGV == txtMaGV.Text);
                     if (currentRow == 0) currentRow = 1;
                     bus.XoaGV(txtMaGV.Text);
-                    GiangVien delUser = lgv.Find(g => g.MaGV == txtMaGV.Text);
-                    lgv.Remove(delUser);
+                    GiangVien delGV = lgv.Find(g => g.MaGV == txtMaGV.Text);
+                    lgv.Remove(delGV);
                     MessageBox.Show("Đã xóa tài khoản " + txtMaGV.Text);
                     dgv.DataSource = null;
                     dgv.DataSource = lgv;
@@ -116,16 +143,7 @@ namespace QLDiemSV.GUI
                 dgv.DataSource = bus.LayDSGiangVien();
         }
 
-        private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtMaGV.Text = dgv.CurrentRow.Cells["MaGV"].Value.ToString();
-            txtTenGV.Text = dgv.CurrentRow.Cells["TenGV"].Value.ToString();
-            txtPhone.Text = dgv.CurrentRow.Cells["Phone"].Value.ToString();
-            cboMaKhoa.Text = dgv.CurrentRow.Cells["MaKhoa"].Value.ToString();
-            txtPhanLoaiGV.Text = dgv.CurrentRow.Cells["PhanLoaiGV"].Value.ToString();
-            txtEmail.Text = dgv.CurrentRow.Cells["Email"].Value.ToString();
-            cboSex.Text = dgv.CurrentRow.Cells["GioiTinh"].Value.ToString();
-        }
+
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
@@ -158,7 +176,7 @@ namespace QLDiemSV.GUI
                             Phone = txtPhone.Text,
                             GioiTinh = cboSex.Text,
                             TenGV = txtTenGV.Text,
-                            PhanloaiGV = txtPhanLoaiGV.Text,
+                            PhanloaiGV = cboPLGiangVien.Text,
                             Email = txtEmail.Text
                         };
 
@@ -181,7 +199,7 @@ namespace QLDiemSV.GUI
                         Phone = txtPhone.Text,
                         GioiTinh = cboSex.Text,
                         TenGV = txtTenGV.Text,
-                        PhanloaiGV = txtPhanLoaiGV.Text,
+                        PhanloaiGV = cboPLGiangVien.Text,
                         Email = txtEmail.Text
                     };
 
@@ -193,7 +211,7 @@ namespace QLDiemSV.GUI
                         gv.MaKhoa = cboMaKhoa.Text;
                         gv.TenGV = txtTenGV.Text;
                         gv.GioiTinh = cboSex.SelectedItem.ToString();
-                        gv.PhanloaiGV = txtPhanLoaiGV.Text;
+                        gv.PhanloaiGV = cboPLGiangVien.Text;
                         gv.Phone = txtPhone.Text;
                         gv.Email = txtEmail.Text;
                         MessageBox.Show("Đã sửa tài khoản '" + egv.MaGV + "'");
@@ -226,12 +244,14 @@ namespace QLDiemSV.GUI
         {
             txtMaGV.Text = dgv.CurrentRow.Cells["MaGV"].Value.ToString();
             txtTenGV.Text = dgv.CurrentRow.Cells["TenGV"].Value.ToString();
-            txtPhanLoaiGV.Text = dgv.CurrentRow.Cells["PhanLoaiGV"].Value.ToString();
+            cboPLGiangVien.Text = dgv.CurrentRow.Cells["PhanLoaiGV"].Value.ToString();
             txtPhone.Text = dgv.CurrentRow.Cells["Phone"].Value.ToString();
             cboMaKhoa.Text = dgv.CurrentRow.Cells["MaKhoa"].Value.ToString();
             txtEmail.Text = dgv.CurrentRow.Cells["Email"].Value.ToString();
             cboSex.Text = dgv.CurrentRow.Cells["GioiTinh"].Value.ToString();
 
         }
+
+
     }
 }

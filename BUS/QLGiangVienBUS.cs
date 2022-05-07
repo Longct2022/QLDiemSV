@@ -10,9 +10,9 @@ namespace QLDiemSV.BUS
 {
     public class QLGiangVienBUS
     {
-        readonly DataHelper dh;
-        readonly GiangVienDAO gvDAO = new GiangVienDAO(Program.strcon);
-        readonly KhoaDAO khoaDAO = new KhoaDAO(Program.strcon);
+        DataHelper dh;
+        GiangVienDAO gvDAO = new GiangVienDAO(Program.strcon);
+        KhoaDAO khoaDAO = new KhoaDAO(Program.strcon);
         public QLGiangVienBUS(string strcon)
         {
             dh = new DataHelper(strcon);

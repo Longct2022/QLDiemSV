@@ -152,6 +152,9 @@
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQLGiangVien.resx">
+      <DependentUpon>frmQLGiangVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmQLLop.resx">
       <DependentUpon>frmQLLop.cs</DependentUpon>
     </EmbeddedResource>

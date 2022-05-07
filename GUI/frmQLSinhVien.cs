@@ -8,7 +8,7 @@ namespace QLDiemSV.GUI
 {
     public partial class frmQLSinhVien : Form
     {
-        readonly QLSinhVienBUS bus = new QLSinhVienBUS(Program.strcon);
+        QLSinhVienBUS bus = new QLSinhVienBUS(Program.strcon);
 
         List<SinhVien> lsv = new List<SinhVien>();
         int flag;
@@ -65,6 +65,7 @@ namespace QLDiemSV.GUI
             flag = 1;
             cbLoc.Checked = false;
             txtMaSV.Enabled = false;
+            btnMoi.Enabled = false;
             btnSua.Enabled = false;
             btnLuu.Enabled = true;
             btnHuy.Enabled = true;
@@ -103,7 +104,7 @@ namespace QLDiemSV.GUI
 
                     btnHuy.Enabled = false;
                     btnLuu.Enabled = false;
-                    btnMoi.Enabled = true;
+                    btnMoi.Enabled = false;
                     btnSua.Enabled = true;
                     btnXoa.Enabled = true;
                 }
@@ -198,13 +199,13 @@ namespace QLDiemSV.GUI
                     SinhVien sv = lsv.Find(us => us.MaSV == esv.MaSV);
 
                     if (sv.MaLop == cboMaLop.Text)  // Trường hợp không thay đổi lớp
-                        bus.SuaSV(esv, sv.MaLop);  
+                        bus.SuaSV(esv, sv.MaLop);
                     else
                     {
                         bus.SuaSV(esv, sv.MaLop);   //Có thay đổi lớp, Bổ sung thêm thông tin mã lớp hiện tại vào để sửa sĩ số cho mã lớp này
-                    }    
-                        
-                        
+                    }
+
+
 
                     sv.MaSV = txtMaSV.Text;
                     sv.MaLop = cboMaLop.Text;

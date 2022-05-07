@@ -24,6 +24,9 @@ namespace QLDiemSV.GUI
             dgvTTUser.DataSource = lus;
             btnHuy.Enabled = false;
             btnLuu.Enabled = false;
+            btnMoi.Enabled = true;
+            btnSua.Enabled = true;
+            btnXoa.Enabled = true;
         }
         int flag;
         private void btnMoi_Click(object sender, EventArgs e)
@@ -36,6 +39,7 @@ namespace QLDiemSV.GUI
             //txtEmail.Clear();
             //cboRole.ResetText();
             //cboSex.ResetText();
+            btnMoi.Enabled = false;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
             btnHuy.Enabled = true;
@@ -126,10 +130,7 @@ namespace QLDiemSV.GUI
                     // Thiết lập dòng được chọn là dòng cuối cùng vừa thêm
                     dgvTTUser.CurrentCell = dgvTTUser.Rows[lus.FindIndex(us => us.UserID == editUser.UserID)].Cells[0];
                 }
-                else if (flag == 2)
-                {
-                    
-                }    
+                
             }
             txtUserID.Clear();
             txtFullName.Clear();
@@ -141,6 +142,7 @@ namespace QLDiemSV.GUI
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
             btnHuy.Enabled = true;
+            //this.frmQLNguoiDung_Load(sender, e);
         }
 
         private void dgvTTUser_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -159,23 +161,14 @@ namespace QLDiemSV.GUI
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            txtUserID.Clear();
-            txtFullName.Clear();
-            txtPassword.Clear();
-            txtPhoneNumber.Clear();
-            txtEmail.Clear();
-            cboRole.ResetText();
-            cboSex.ResetText();
-            btnSua.Enabled = true;
-            btnXoa.Enabled = true;
-            btnHuy.Enabled = false;
-            btnLuu.Enabled = false;
+            this.frmQLNguoiDung_Load(sender, e);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             flag = 1;
             txtUserID.Enabled = false;
+            btnMoi.Enabled = false;
             btnSua.Enabled = false;
             btnLuu.Enabled = true;
             btnHuy.Enabled = true;
@@ -184,6 +177,7 @@ namespace QLDiemSV.GUI
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
+            btnMoi.Enabled = true;
             btnSua.Enabled = true;
             btnLuu.Enabled = false;
             btnHuy.Enabled = false;
