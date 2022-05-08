@@ -101,6 +101,8 @@ namespace QLDiemSV.GUI
             btnSave.Enabled = true;
             btnCancel.Enabled = true;
             btnInforChange.Enabled = false;
+            txtCurrentPassword.Focus();
+            btnPasswordChange.Enabled = false;
         }
 
         private void btnInforChange_Click(object sender, EventArgs e)
@@ -117,6 +119,8 @@ namespace QLDiemSV.GUI
             txtRole.Enabled = false;
             txtEmail.Enabled = true;
             cboSex.Enabled = true;
+            txtFullName.Focus();
+            btnInforChange.Enabled = false;
 
         }
 

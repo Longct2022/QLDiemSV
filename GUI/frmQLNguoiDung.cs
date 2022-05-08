@@ -27,6 +27,7 @@ namespace QLDiemSV.GUI
             btnMoi.Enabled = true;
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
+            txtUserID.Enabled = true;
         }
         int flag;
         private void btnMoi_Click(object sender, EventArgs e)
@@ -43,7 +44,7 @@ namespace QLDiemSV.GUI
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
             btnHuy.Enabled = true;
-            btnLuu.Enabled=true;
+            btnLuu.Enabled = true;
             txtUserID.Focus();
 
         }
@@ -95,44 +96,56 @@ namespace QLDiemSV.GUI
                         dgvTTUser.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                         // Thiết lập dòng được chọn là dòng cuối cùng vừa thêm
                         dgvTTUser.CurrentCell = dgvTTUser.Rows[dgvTTUser.Rows.Count - 1].Cells[0];
-                    } 
+                    }
                 }
                 else if (flag == 1)
                 {
-                    Users editUser = new Users
+                    Users u = lus.Find(user => user.UserID == txtUserID.Text);
+                    if (u == null)
                     {
-                        UserID = txtUserID.Text,
-                        Password = txtPassword.Text,
-                        FullName = txtFullName.Text,
-                        Sex = cboSex.Text,
-                        PhoneNumber = txtPhoneNumber.Text,
-                        Email = txtEmail.Text
-                    };
-                    if (cboRole.SelectedItem.ToString() != "Admin")
-                    {
-                        editUser.Role = "Member";
+                        MessageBox.Show("UserID không tồn tại !", "Thông báo", MessageBoxButtons.OK);
+                        txtUserID.Focus();
+                        txtUserID.Enabled = true;
                     }
-                    else editUser.Role = cboRole.SelectedItem.ToString();
+                    else
+                    {
+                        Users editUser = new Users
+                        {
+                            UserID = txtUserID.Text,
+                            Password = txtPassword.Text,
+                            FullName = txtFullName.Text,
+                            Sex = cboSex.Text,
+                            PhoneNumber = txtPhoneNumber.Text,
+                            Email = txtEmail.Text
+                        };
+                        if (cboRole.SelectedItem.ToString() != "Admin")
+                        {
+                            editUser.Role = "Member";
+                        }
+                        else editUser.Role = cboRole.SelectedItem.ToString();
 
 
-                    bus.SuaUser(editUser);
-                    Users user = lus.Find(us => us.UserID == editUser.UserID);
-                    user.FullName = txtFullName.Text;
-                    user.Sex = cboSex.SelectedItem.ToString();
-                    user.PhoneNumber = txtPhoneNumber.Text;
-                    user.Role = cboRole.SelectedItem.ToString();
-                    user.Email = txtEmail.Text;
-                    user.Password = txtPassword.Text;
-                    MessageBox.Show("Đã sửa tài khoản " + editUser.UserID);
-                    dgvTTUser.DataSource = null;
-                    dgvTTUser.DataSource = lus;
-                    dgvTTUser.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                    // Thiết lập dòng được chọn là dòng cuối cùng vừa thêm
-                    dgvTTUser.CurrentCell = dgvTTUser.Rows[lus.FindIndex(us => us.UserID == editUser.UserID)].Cells[0];
+                        bus.SuaUser(editUser);
+                        Users user = lus.Find(us => us.UserID == editUser.UserID);
+                        user.FullName = txtFullName.Text;
+                        user.Sex = cboSex.SelectedItem.ToString();
+                        user.PhoneNumber = txtPhoneNumber.Text;
+                        user.Role = cboRole.SelectedItem.ToString();
+                        user.Email = txtEmail.Text;
+                        user.Password = txtPassword.Text;
+                        MessageBox.Show("Đã sửa tài khoản " + editUser.UserID);
+                        dgvTTUser.DataSource = null;
+                        dgvTTUser.DataSource = lus;
+                        dgvTTUser.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                        // Thiết lập dòng được chọn là dòng cuối cùng vừa thêm
+                        dgvTTUser.CurrentCell = dgvTTUser.Rows[lus.FindIndex(us => us.UserID == editUser.UserID)].Cells[0];
+                    }
                 }
-                
             }
             txtUserID.Clear();
+
+            txtUserID.Enabled = true;
+            txtUserID.Focus();
             txtFullName.Clear();
             txtPassword.Clear();
             txtPhoneNumber.Clear();
@@ -141,8 +154,9 @@ namespace QLDiemSV.GUI
             cboSex.ResetText();
             btnSua.Enabled = true;
             btnXoa.Enabled = true;
-            btnHuy.Enabled = true;
-            //this.frmQLNguoiDung_Load(sender, e);
+            btnHuy.Enabled = false;
+            btnLuu.Enabled = false;
+            btnMoi.Enabled = true;
         }
 
         private void dgvTTUser_CellClick(object sender, DataGridViewCellEventArgs e)

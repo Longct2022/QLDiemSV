@@ -65,7 +65,7 @@
             this.gbPasswordChange.Controls.Add(this.label9);
             this.gbPasswordChange.Controls.Add(this.txtNewPassword);
             this.gbPasswordChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbPasswordChange.ForeColor = System.Drawing.Color.Blue;
+            this.gbPasswordChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.gbPasswordChange.Location = new System.Drawing.Point(12, 14);
             this.gbPasswordChange.Name = "gbPasswordChange";
             this.gbPasswordChange.Size = new System.Drawing.Size(377, 213);
@@ -219,7 +219,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.Blue;
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnSave.Location = new System.Drawing.Point(402, 147);
             this.btnSave.Name = "btnSave";
@@ -232,7 +232,7 @@
             // btnInforChange
             // 
             this.btnInforChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInforChange.ForeColor = System.Drawing.Color.Blue;
+            this.btnInforChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnInforChange.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInforChange.Location = new System.Drawing.Point(402, 37);
             this.btnInforChange.Name = "btnInforChange";
@@ -257,7 +257,7 @@
             // btnPasswordChange
             // 
             this.btnPasswordChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPasswordChange.ForeColor = System.Drawing.Color.Blue;
+            this.btnPasswordChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnPasswordChange.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPasswordChange.Location = new System.Drawing.Point(402, 92);
             this.btnPasswordChange.Name = "btnPasswordChange";
@@ -318,7 +318,7 @@
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.Blue;
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.btnCancel.Location = new System.Drawing.Point(402, 192);
             this.btnCancel.Name = "btnCancel";
@@ -332,6 +332,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(578, 330);
             this.Controls.Add(this.gbPasswordChange);
             this.Controls.Add(this.btnCancel);
