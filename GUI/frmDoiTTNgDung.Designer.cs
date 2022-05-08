@@ -332,7 +332,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(578, 330);
             this.Controls.Add(this.gbPasswordChange);
             this.Controls.Add(this.btnCancel);
@@ -343,7 +342,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmDoiTTNgDung";
-            this.Text = "frmDoiTTNgDung";
+            this.Text = "Quản lý người dùng";
             this.Load += new System.EventHandler(this.frmDoiTTNgDung_Load);
             this.gbPasswordChange.ResumeLayout(false);
             this.gbPasswordChange.PerformLayout();

@@ -30,6 +30,7 @@ namespace QLDiemSV.GUI
             cboMaLop.DisplayMember = "MaLop";
             cboLoc.Enabled = false;
             cbLoc.Checked = false;
+            txtMaSV.Enabled = true;
         }
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)

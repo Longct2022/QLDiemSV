@@ -145,7 +145,7 @@
             this.cboRole.Location = new System.Drawing.Point(723, 128);
             this.cboRole.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboRole.Name = "cboRole";
-            this.cboRole.Size = new System.Drawing.Size(180, 33);
+            this.cboRole.Size = new System.Drawing.Size(180, 28);
             this.cboRole.TabIndex = 6;
             // 
             // cboSex
@@ -157,7 +157,7 @@
             this.cboSex.Location = new System.Drawing.Point(120, 124);
             this.cboSex.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboSex.Name = "cboSex";
-            this.cboSex.Size = new System.Drawing.Size(180, 33);
+            this.cboSex.Size = new System.Drawing.Size(180, 28);
             this.cboSex.TabIndex = 4;
             // 
             // label4
@@ -170,7 +170,7 @@
             this.label4.Location = new System.Drawing.Point(252, 14);
             this.label4.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(615, 38);
+            this.label4.Size = new System.Drawing.Size(490, 31);
             this.label4.TabIndex = 45;
             this.label4.Text = "QUẢN LÝ THÔNG TIN NGƯỜI DÙNG";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -180,7 +180,7 @@
             this.txtFullName.Location = new System.Drawing.Point(723, 61);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Size = new System.Drawing.Size(180, 30);
+            this.txtFullName.Size = new System.Drawing.Size(180, 26);
             this.txtFullName.TabIndex = 3;
             // 
             // txtPassword
@@ -188,7 +188,7 @@
             this.txtPassword.Location = new System.Drawing.Point(419, 61);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(166, 30);
+            this.txtPassword.Size = new System.Drawing.Size(166, 26);
             this.txtPassword.TabIndex = 2;
             // 
             // txtPhoneNumber
@@ -196,7 +196,7 @@
             this.txtPhoneNumber.Location = new System.Drawing.Point(419, 124);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(170, 30);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(170, 26);
             this.txtPhoneNumber.TabIndex = 5;
             // 
             // txtUserID
@@ -204,7 +204,7 @@
             this.txtUserID.Location = new System.Drawing.Point(120, 61);
             this.txtUserID.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUserID.Name = "txtUserID";
-            this.txtUserID.Size = new System.Drawing.Size(180, 30);
+            this.txtUserID.Size = new System.Drawing.Size(180, 26);
             this.txtUserID.TabIndex = 1;
             // 
             // txtGhiChu
@@ -213,7 +213,7 @@
             this.txtGhiChu.Location = new System.Drawing.Point(618, 65);
             this.txtGhiChu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(95, 25);
+            this.txtGhiChu.Size = new System.Drawing.Size(76, 20);
             this.txtGhiChu.TabIndex = 35;
             this.txtGhiChu.Text = "FullName";
             // 
@@ -223,7 +223,7 @@
             this.label5.Location = new System.Drawing.Point(326, 128);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 25);
+            this.label5.Size = new System.Drawing.Size(55, 20);
             this.label5.TabIndex = 37;
             this.label5.Text = "Phone";
             // 
@@ -233,7 +233,7 @@
             this.lblMaLopMoi.Location = new System.Drawing.Point(618, 136);
             this.lblMaLopMoi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMaLopMoi.Name = "lblMaLopMoi";
-            this.lblMaLopMoi.Size = new System.Drawing.Size(51, 25);
+            this.lblMaLopMoi.Size = new System.Drawing.Size(42, 20);
             this.lblMaLopMoi.TabIndex = 38;
             this.lblMaLopMoi.Text = "Role";
             // 
@@ -243,7 +243,7 @@
             this.label2.Location = new System.Drawing.Point(326, 65);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 25);
+            this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 36;
             this.label2.Text = "Password";
             // 
@@ -253,7 +253,7 @@
             this.lblMaLop.Location = new System.Drawing.Point(43, 128);
             this.lblMaLop.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMaLop.Name = "lblMaLop";
-            this.lblMaLop.Size = new System.Drawing.Size(47, 25);
+            this.lblMaLop.Size = new System.Drawing.Size(36, 20);
             this.lblMaLop.TabIndex = 39;
             this.lblMaLop.Text = "Sex";
             // 
@@ -263,7 +263,7 @@
             this.label1.Location = new System.Drawing.Point(43, 65);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 25);
+            this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 40;
             this.label1.Text = "UserID";
             // 
@@ -289,7 +289,7 @@
             this.label3.Location = new System.Drawing.Point(43, 180);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 25);
+            this.label3.Size = new System.Drawing.Size(48, 20);
             this.label3.TabIndex = 37;
             this.label3.Text = "Email";
             // 
@@ -298,12 +298,12 @@
             this.txtEmail.Location = new System.Drawing.Point(120, 177);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(180, 30);
+            this.txtEmail.Size = new System.Drawing.Size(180, 26);
             this.txtEmail.TabIndex = 7;
             // 
             // frmQLNguoiDung
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.PowderBlue;
             this.ClientSize = new System.Drawing.Size(924, 563);
@@ -327,7 +327,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmQLNguoiDung";
-            this.Text = "frmQLNguoiDung";
+            this.Text = "Quản lý người dùng";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmQLNguoiDung_FormClosing);
             this.Load += new System.EventHandler(this.frmQLNguoiDung_Load);
             this.groupBox1.ResumeLayout(false);
