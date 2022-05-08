@@ -1,0 +1,26 @@
+Nội dung kiểm thử
+Form Main
+- Đăng xuất: về Form đăng nhập
+Form Đăng nhập:
+- Đăng nhập với tài khoản Admin: Hiển thị các menu trừ menu sau: (1) quản lý người dùng, (2) Quản lý lớp, (3) Quản lý Giảng viên
+- Đăng nhập với tài khoản Admin: Hiển thị mọi menu
+Form Cập nhật tài khoản:
+- Thay đổi thông tin cá nhân
+- Thay đổi mật khẩu, kết thúc yeuu cầu đăng nhập lại
+Form Quản lý người dùng
+- Khi khởi động form, các ô textbox combobox đều trắng; button Thêm mới, Sửa, Xóa hiển thị; button Lưu, Hủy ẩn; DataGridView hiển thị danh sách người dùng; Dòng hiện thời trên DataGridView là dòng đầu tiên
+- Khi kích chọn vào một ô trong DataGridView, nội dung thông tin từ Row hiện thời được copy lên các textbox và combobox tương ứng
+- Khi chọn Nút Thêm mới, button Sửa Xóa bị ẩn đi; button Lưu, Hủy hiển thị; con trỏ đặt tại txt Mã người dùng. Người dùng nhập thông tin vào các textbox và combobox. Kết thúc nhập thông tin, người dùng ấn nút Lưu. Nếu mã người dùng đã có hiển thị thông báo mã người dùng đã tồn tại, nếu mã người dùng chưa có, hiển thị thêm thành công người dùng có id mới được thêm, con trỏ trên Datagridview trỏ vào dòng người dùng mới thêm. Form được đưa về trạng thái như khi mới load (các nút thêm sửa xóa hiển thị, lưu, hủy bị ẩn đi, textbox và combobox bị xóa).
+- Khi chọn nút Sửa, textbox mã người dùng bị ẩn đi, người dùng phải chọn thông tin muốn xóa từ danh sách, sau đó thay đổi thông tin trên các textbox và combobox. Kết thúc người dùng chọn Lưu, nếu ô mã người dùng để trống, hiển thị thông báo ô mã người dùng không được để trống, nếu không hiển thị thông báo xóa thành công. Con trỏ trên DataGridview trỏ về dòng vừa được sửa
+- Khi chọn nút xóa, nếu ô mã người dùng để trống, hiển thị thông báo ô mã người dùng không được để trống, nếu không hiển thị thông báo xóa thành công. Con trỏ trên DataGridview trỏ về dòng ngay trước dòng bị xóa
+- Khi chọn nút Hủy, form dược đưa về trạng thái ban đầu (như mới được load)
+
+Form Quản lý Sinh Viên:
+- Khi khởi động form, các ô textbox combobox đều trắng; button Thêm mới, Sửa, Xóa hiển thị; button Lưu, Hủy ẩn; DataGridView hiển thị danh sách SV
+- Khi kích chọn vào một ô trong DataGridView, nội dung thông tin từ Row hiện thời được copy lên các textbox và combobox tương ứng
+- Khi chọn Nút Thêm mới, button Sửa Xóa bị ẩn đi; button Lưu, Hủy hiển thị; con trỏ đặt tại txt Mã SV. Người dùng nhập thông tin vào các textbox và combobox. Kết thúc nhập thông tin, người dùng ấn nút Lưu. Nếu mã SV đã có hiển thị thông báo mã SV đã tồn tại, nếu mã SV chưa có, hiển thị thêm thành công SV có MSV mới được thêm, con trỏ trên Datagridview trỏ vào dòng SV mới thêm. Form được đưa về trạng thái như khi mới load (các nút thêm sửa xóa hiển thị, lưu, hủy bị ẩn đi, textbox và combobox bị xóa). Khi thêm mới, thông tin SiSo trong bảng lớp sẽ được thay đổi (xem trong menu QUản lý lớp)
+- Khi chọn nút Sửa, Tính năng lọc SV theo lớp sẽ không hoạt động. Textbox mã SV bị ẩn đi, người dùng phải chọn thông tin muốn xóa từ danh sách, sau đó thay đổi thông tin trên các textbox và combobox. Kết thúc người dùng chọn Lưu, nếu ô mã SV để trống, hiển thị thông báo ô mã SV không được để trống, nếu không hiển thị thông báo xóa thành công. Con trỏ trên DataGridview trỏ về dòng vừa được sửa. Khi sửa thông tin lớp của SV, thông tin SiSo trong danh sách lớp cũng thay đổi
+- Khi chọn nút xóa Nếu ô mã SV để trống, hiển thị thông báo ô mã SV không được để trống, nếu không hiển thị thông báo xóa thành công. Con trỏ trên DataGridview trỏ về dòng ngay trước dòng bị xóa. Khi xóa một SV, thông tin SiSo trong danh sách lớp cũng thay đổi
+- Khi chọn nút Hủy, form dược đưa về trạng thái ban đầu (như mới được load).
+- Khi chọn tính năng lọc theo lớp, combobox Lớp cần lọc sẽ hiển thị cho phép lọc thông tin trên Datagridview.
+Form Quản lý Lớp, Giảng viên tương tự form quản lý sinh viên:
