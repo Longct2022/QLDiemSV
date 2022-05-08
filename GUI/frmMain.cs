@@ -180,5 +180,12 @@ namespace QLDiemSV.GUI
             f.WindowState= FormWindowState.Maximized;
             f.Show();
         }
+
+        private void ảnhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQLAnh f = new frmQLAnh();
+            f.MdiParent= this;
+            f.Show();
+        }
     }
 }

@@ -50,6 +50,7 @@
             this.mnuThongKeSV = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuTroGiup = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAbout = new System.Windows.Forms.ToolStripMenuItem();
+            this.ảnhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -80,7 +81,8 @@
             this.timKiếmToolStripMenuItem,
             this.thốngKêToolStripMenuItem,
             this.mnuTroGiup,
-            this.mnuAbout});
+            this.mnuAbout,
+            this.ảnhToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -153,21 +155,21 @@
             // mnuQLSV
             // 
             this.mnuQLSV.Name = "mnuQLSV";
-            this.mnuQLSV.Size = new System.Drawing.Size(180, 22);
+            this.mnuQLSV.Size = new System.Drawing.Size(130, 22);
             this.mnuQLSV.Text = "Sinh viên";
             this.mnuQLSV.Click += new System.EventHandler(this.mnuQLSV_Click);
             // 
             // mnuQLGV
             // 
             this.mnuQLGV.Name = "mnuQLGV";
-            this.mnuQLGV.Size = new System.Drawing.Size(180, 22);
+            this.mnuQLGV.Size = new System.Drawing.Size(130, 22);
             this.mnuQLGV.Text = "Giảng viên";
             this.mnuQLGV.Click += new System.EventHandler(this.mnuQLGV_Click);
             // 
             // mnuQLLop
             // 
             this.mnuQLLop.Name = "mnuQLLop";
-            this.mnuQLLop.Size = new System.Drawing.Size(180, 22);
+            this.mnuQLLop.Size = new System.Drawing.Size(130, 22);
             this.mnuQLLop.Text = "Lớp";
             this.mnuQLLop.Click += new System.EventHandler(this.mnuQLLop_Click);
             // 
@@ -212,6 +214,13 @@
             this.mnuAbout.Text = "&About";
             this.mnuAbout.Click += new System.EventHandler(this.mnuAbout_Click);
             // 
+            // ảnhToolStripMenuItem
+            // 
+            this.ảnhToolStripMenuItem.Name = "ảnhToolStripMenuItem";
+            this.ảnhToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.ảnhToolStripMenuItem.Text = "Ảnh";
+            this.ảnhToolStripMenuItem.Click += new System.EventHandler(this.ảnhToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +264,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuTroGiup;
         private System.Windows.Forms.ToolStripMenuItem mnuAbout;
         private System.Windows.Forms.ToolStripMenuItem mnuQLLop;
+        private System.Windows.Forms.ToolStripMenuItem ảnhToolStripMenuItem;
     }
 }
 
